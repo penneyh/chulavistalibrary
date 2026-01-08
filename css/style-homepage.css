@@ -1,0 +1,351 @@
+/* global variables */
+:root {
+    --main-font: Verdana, Arial sans-serif;
+    --headline-font: Cambria, Georgia, sans-serif;
+    --primary-color: #19457f;
+    --secondary-color: #8ea499;
+    --tertiary-color: #cb6f18;
+    --border-radius: 6px;
+}
+
+/* main styles */
+
+html { font-size: 10px; }
+
+h1 { 
+    font: 3rem var(--main-font); 
+    margin-bottom: 5px;
+}
+h2 { 
+    font: 2.5rem var(--headline-font);
+    margin-bottom: 5px;
+}
+h3 { 
+    font-size: 2rem; 
+    margin-bottom: 5px;
+}
+h4 { 
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+p { font-size: 1.6rem; }
+
+figcaption {
+    color: #000;
+    font-size: 1.4em;
+    font-style: italic;
+    text-align: center;
+    margin: .5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+a:hover {
+    color: red;
+    opacity: 0.8;
+} 
+
+/* header */
+
+header {
+    background-size: cover;
+    color: #fff;
+}
+.logo {
+    height: 70px;
+}
+
+/* navigation */
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: var(--primary-color);
+}
+nav section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    font-size: 1.4rem;
+    display: none;
+}
+nav li {
+    text-align: center;
+    border-bottom: solid 1px #fff;
+    vertical-align: middle;
+}
+nav li:first-child {
+    border-top: solid 1px #fff;
+}
+nav a {
+    color: #fff;
+    padding: .8em;
+    display: block;
+}
+#user {
+    height: 2rem;
+    vertical-align: middle;
+}
+.showMenu {
+    color: #fff;
+    text-align: right;
+    padding: .3em .7em 1.6em .3em;
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    padding-top: .8em;
+    height: 36px;
+}
+nav input[type=checkbox]:checked ~ ul {display: block;
+}
+nav input[type=checkbox] { display: none; }
+
+/* hero */
+
+#hero {
+    background-image: url(../images/south-small.jpg);
+    height: 25vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* motto */
+
+#motto {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+    padding: 15px;
+}
+
+main {
+    padding-top: 70px;
+}
+main h2 { 
+    font-size: 1.6rem; 
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+}
+main h3 {
+    background-color: var(--primary-color);
+    font: 10px var(--headline-font);
+    font-size: 1.4rem;
+    color: #fff;
+    font-style: italic;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Search */
+
+form#keywords {
+    margin: 1em auto;
+}
+fieldset {
+    border: solid 1px #000;
+    border-radius: 4px;
+    padding: .8em;
+    margin-bottom: 2rem;
+    max-width: 400px;
+}
+legend {
+    font-size: 1.6em;
+    font-style: italic;
+    color: #000;
+    padding: 0 4px;
+}
+input[type=submit], input[type=reset] {
+    display: inline-block;
+    background-color: #fff;
+    padding: .5em .75em;
+    margin: 0 1em 2em 0;
+    width: inherit;
+    min-width: inherit;
+    max-width: inherit;
+    border: solid 1px #000;
+    border-radius: 4px;
+}
+
+/* homepage images */
+
+figure img {
+    max-width: 300px;
+    margin: 20px;
+    border-radius: 14px;
+    border: solid 1px var(--secondary-color);
+}
+
+/* homepage eLibrary section */
+
+#elibrary ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.library {
+    height: 70px;
+    padding: 10px;
+    margin: 10px;
+    border: solid 3px var(--primary-color);
+    border-radius: 50%;
+}
+main a {
+    color: inherit;
+    font-weight: bold;
+}
+main li {
+    padding-bottom: 15px;
+}
+
+/*footer*/
+
+footer {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#darkfooter {
+    background-color: #c35f1c;
+}
+footer .logo {
+    height: 90px;
+    display: block;
+    margin: auto;
+    padding: 0 1rem 0 0;
+}
+#socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px 20px;
+}
+.social {
+    height: 25px;
+}
+#lightfooter {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 7fr;
+    text-align: start;
+    padding: 25px 10px 0;
+}
+footer h4 {
+    text-align: left;
+    padding: 25px 0 0 10px;
+}
+.pin {
+    height: 20px;
+    vertical-align: middle;
+}
+footer a {
+    color: var(--primary-color);
+    font-weight: bold;
+} 
+footer ul {
+    padding: 0 5px 20px 0;
+}
+footer li:first-child {
+    padding: 0 0 10px;
+}
+footer p {
+    font-size: 1.4rem;
+    text-align: start;
+    padding: 0 15px;
+    line-height: 1.4;
+    margin-bottom: 1.4em;
+}
+footer p:first-child {
+    padding-top: 15px;
+}
+#copyright {
+    font-size: 1rem;
+    text-align: center;    
+}
+
+/*button size changes */
+@media screen and (min-width: 400px) {
+    #cancel {
+        width: auto;
+    }
+    #forgot {
+        float: right;
+        padding-top: 16px;
+    }
+}
+    
+/* tablet */
+@media screen and (min-width: 700px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .showMenu { display:none; }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+    nav li {
+        border: none!important; 
+        padding-right: 15px;
+    }
+    #hero {
+        height: 25vh;
+    }
+    footer {
+        display: flex;
+        padding-bottom: 0;
+    }
+    #darkfooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        }
+    footer section:last-child {
+        align-content: center;
+        text-align: left;
+        margin: 20px 0;
+        padding-left: 10px;
+        border-left: solid 1px var(--primary-color);
+    }
+    footer p:first-child {
+        padding-top: 0;
+    }
+    #copyright {
+        text-align: left;
+    }
+}
+
+/* desktop */
+@media screen and (min-width: 1000px) {
+    #hero {
+        background-image: url(../images/south-large.jpg);
+    }
+    #darkfooter {
+        margin-right: 15px;
+    }
+    #lightfooter { grid-template-columns: 1fr 8fr 1fr 7fr; }
+    footer section:last-child {
+        padding-left: 30px;
+        margin-left: 20px;
+    }
+}
+

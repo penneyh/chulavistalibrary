@@ -1,0 +1,324 @@
+/* global variables */
+:root {
+    --main-font: Verdana, Arial sans-serif;
+    --headline-font: Cambria, Georgia, sans-serif;
+    --primary-color: #19457f;
+    --secondary-color: #8ea499;
+    --tertiary-color: #cb6f18;
+    --border-radius: 6px;
+}
+
+/* main styles */
+
+html { font-size: 10px; }
+
+h1 { font-size: 3rem; 
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+p { font-size: 1.6rem; }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: red; /* change to default color at later time */
+}
+
+
+/* header */
+
+header {
+    background-size: cover;
+    color: #fff;
+}
+.logo {
+    height: 70px;
+}
+
+
+/* navigation */
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-color: var(--primary-color);
+}
+nav section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    font-size: 1.4rem;
+    display: none;
+}
+nav li {
+    text-align: center;
+    border-bottom: solid 1px #fff;
+    vertical-align: middle;
+}
+nav li:first-child {
+    border-top: solid 1px #fff;
+}
+nav a {
+    color: #fff;
+    padding: .8em;
+    display: block;
+}
+#user {
+    height: 2rem;
+    vertical-align: middle;
+}
+.showMenu {
+    color: #fff;
+    text-align: right;
+    padding: .3em .7em 1.6em .3em;
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    padding-top: .8em;
+    height: 36px;
+}
+nav input[type=checkbox]:checked ~ ul {display: block;
+}
+nav input[type=checkbox] { display: none; }
+
+/*services page*/
+
+.servHero {
+    /*background: center center / cover no-repeat;*/
+    /*background: url('../images/servicesHerosml2.jpg') center center / cover no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 10px -8px rgba(0,0,0,0.7);
+}
+
+.headerContainer h1 {
+    color: var(--primary-color);
+    text-align: center;
+    padding-bottom: 10px;
+    background-color: var(--tertiary-color);
+}
+/*Services page links MOR*/
+#services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    place-items: center;
+    margin-bottom: 50px;
+}
+.containerServ {
+    width: 200px;
+    height: 170px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+     box-shadow: 0 8px 10px -8px rgba(0,0,0,0.7);
+    /*margin: 30px;*/
+}
+.containerServ img {
+    width: 150px;
+    height: auto;
+    padding-top: 20px;
+}
+.containerServ h3 {
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 10px;
+    font-weight: bold;
+    
+}
+.containerServ a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+#hSchool {
+    font-size: 1.5rem;
+}
+/*
+#career {
+    margin-left: 7px;
+}
+*/
+
+
+
+/*footer*/
+
+footer {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+#darkfooter {
+    background-color: #c35f1c;
+}
+footer .logo {
+    height: 90px;
+    display: block;
+    margin: auto;
+    padding: 0 1rem 0 0;
+}
+#socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 5px 20px;
+}
+.social {
+    height: 25px;
+}
+#lightfooter {
+    display: grid;
+    grid-template-columns: 1fr 7fr 1fr 7fr;
+    text-align: start;
+    padding: 25px 10px 0;
+}
+footer h3 {
+    text-align: left;
+    padding: 25px 0 0 10px;
+}
+.pin {
+    height: 20px;
+    vertical-align: middle;
+}
+footer a {
+    font-weight: bold;
+} 
+footer ul {
+    padding: 0 5px 20px 0;
+}
+footer li:first-child {
+    padding: 0 0 10px;
+}
+footer p {
+    font-size: 1.4rem;
+    text-align: start;
+    padding: 0 15px;
+}
+footer p:first-child {
+    padding-top: 15px;
+}
+#copyright {
+    font-size: 1rem;
+    text-align: center;    
+}
+
+
+/* tablet */
+
+@media screen and (min-width: 700px) {
+    #hero {
+        background-image: url(../images/south-large.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px;    
+    }
+    /*service page MOR*/
+    #services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        place-items: center;
+        gap: 10px;
+    }
+    .containerServ img {
+        width: fit-content;
+    }
+    .containerServ {
+        width: 250px;
+        height: 200px;
+        margin-top: 20px;
+    }
+    /*footer*/
+    footer {
+        display: flex;
+        padding-bottom: 0;
+    }
+    #darkfooter {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        }
+    footer section:last-child {
+        align-content: center;
+        text-align: left;
+        margin: 20px 0;
+        padding-left: 10px;
+        border-left: solid 1px var(--primary-color);
+    }
+    footer p:first-child {
+        padding-top: 0;
+    }
+    #copyright {
+        text-align: left;
+    }
+}
+
+
+/* desktop */
+
+@media screen and (min-width: 1000px) {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    .showMenu { display:none; }
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+    }
+    nav li {
+        border: none!important; 
+        padding-right: 15px;
+    }
+    .onRight {
+        float: right;
+        padding-left: 1rem;
+    }
+    #hero { height: 400px; }
+    #darkfooter {
+        margin-right: 15px;
+    }
+    #lightfooter { grid-template-columns: 1fr 8fr 1fr 7fr; }
+    footer section:last-child {
+        padding-left: 30px;
+        margin-left: 20px;
+    }
+    /*services page MOR*/
+    #services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        place-items: center;
+        gap: 10px;
+    }
+}
