@@ -295,6 +295,10 @@ h3.year {
 
 /*-----------------------------------------------calendar - single event page mor*/
 
+.singleEvent {
+	padding-left: 20px;
+}
+
 .singleEvent h2 {
     color: var(--primary-color);
     font-weight: bold;
