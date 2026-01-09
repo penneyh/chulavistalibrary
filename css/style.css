@@ -362,6 +362,14 @@ select#search {
     padding: 10px;
     border-radius: 15px;
 }
+/*--------------------------Home Carousel MOR*/
+.carouselTitle .homeH2 {
+    background-color: var(--secondary-color);
+    max-width: none !important;
+    margin: 0 auto;
+    border-radius: 0;
+    text-align: center;
+}
 /*--secondary-color --tertiary-color  --primary-color*/
 /*------------------------------------------------------- Catalog Page Carrousel--mor*/
 
@@ -417,7 +425,7 @@ select#search {
 .carousel {
     /*border: 2px solid #c448b5;*/
     /*padding: 15px;*/
-    background-color: #ffffff;
+    background-color: #fff;
     width: 90%;
 }
 .carousel img {
