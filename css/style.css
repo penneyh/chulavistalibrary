@@ -588,7 +588,7 @@ input[type=text], input[type=password] {
 
 /* buttons */
 
-#userlogin button {
+#cancel, #userlogin button {
     background-color: var(--primary-color);
     color: white;
     padding: 14px 20px;
