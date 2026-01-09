@@ -435,12 +435,10 @@ select#search {
 
 /* main */
 
-/*
-main {
+#contactTableMain {
     padding: 10px;
     margin: auto;
 }
-*/
 
 /* contact table */
 .contactTable { 
@@ -556,7 +554,8 @@ main {
 }
 
 .locationsHR {
-    align-content: center;
+    margin-left: 0;
+	margin-right: auto;
     border: solid 3px var(--tertiary-color);
     margin-bottom: 15px;
     width: 150px;
@@ -720,7 +719,10 @@ footer p:first-child {
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 	.singleEvent img {
-	width: 400px;
+		width: 400px;
+	}
+	.branchStyles img {
+		width: 400px;
 	}
 	#cancel {
         width: auto;
@@ -798,7 +800,10 @@ footer p:first-child {
     .slick-next {
         right: -40px;
 }
-    footer {
+	.contactForm {
+		max-width: 700px;
+	}
+	footer {
         display: flex;
         padding-bottom: 0;
     }
