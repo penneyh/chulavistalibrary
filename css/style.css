@@ -588,7 +588,7 @@ input[type=text], input[type=password] {
 
 /* buttons */
 
-button {
+#userlogin button {
     background-color: var(--primary-color);
     color: white;
     padding: 14px 20px;
@@ -599,7 +599,7 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+#userlogin button:hover {
     opacity: 0.8;
 }
 
