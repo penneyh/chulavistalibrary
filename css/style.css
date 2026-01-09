@@ -74,7 +74,7 @@ header {
 /* navigation */
 
 nav {
-    position: absolute;
+    position: static;
     width: 100%;
     top: 0;
     background-color: var(--primary-color);
