@@ -606,8 +606,6 @@ input[type=text], input[type=password] {
 /* cancel button */
 
 #cancel {
-  width: 100%;
-  padding: 10px 18px;
   background-color: #f44336;
 }
 
@@ -712,6 +710,13 @@ footer p:first-child {
     #services {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+	#cancel {
+        width: auto;
+    }
+    #forgotusername, #forgotpassword {
+        float: right;
+        padding-left: 15px;
     }
 }
 
