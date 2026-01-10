@@ -272,16 +272,19 @@ figure img {
     padding-top: 20px;
 }
 .containerServ h3 {
+    color: var(--primary-color);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-top: 10px;
     font-weight: bold;
 }
+/*
 .containerServ a {
     color: var(--primary-color);
     text-decoration: none;
 	font-size: 1.5rem;
 }
+*/
 /*
 #hSchool {
     font-size: 1.5rem;
@@ -298,7 +301,7 @@ figure img {
 }
 .calendarContainer {
     font-family: var(--main-font);
-    max-width: 800px;
+/*    max-width: 800px;*/
     margin: 0 20px;
 }
 h2.eventTittle {
@@ -393,7 +396,7 @@ select#search {
     margin-left: 10%;
 }
 #srchInput {
-    /*width: 350px;*/
+    width: 250px;
     height: 25px;
     font-size: 1.6rem;
     margin: 0 0 2em 1em;
@@ -413,7 +416,7 @@ select#search {
     color: var(--primary-color);
 }
 .carouselTitle h2 {
-    margin: 40px 0 10px 30px;
+    margin: 40px 0 10px 15%;
     color:  var( --primary-color);
     font-weight: bold;
     background-color: var(--tertiary-color);
@@ -422,12 +425,13 @@ select#search {
     border-radius: 15px;
 }
 /*--------------------------Home Carousel MOR*/
-.carouselTitle .homeH2 {
+.homeH2 {
     background-color: var(--secondary-color);
-    max-width: none !important;
+    font-weight: bold;
     margin: 0 auto;
     border-radius: 0;
     text-align: center;
+    padding: 10px;
 }
 /*--secondary-color --tertiary-color  --primary-color*/
 /*------------------------------------------------------- Catalog Page Carrousel--mor*/
@@ -475,7 +479,7 @@ select#search {
     border-radius: 15px;
     padding: 20px;
     padding-top: 40px;
-    width: 80vw;
+    width: 70vw;
     height: auto;
     background-color: var(--primary-color);
     margin: 20px auto;
@@ -890,14 +894,14 @@ footer p:first-child {
 	max-width: 700px;
 	}
 	.carouselTitle h2 {
-    margin-left: 10%;
+    margin-left: 15%;
     }
     /*catalog*/
     .slick-prev {
-        left: -50px;
+        left: -35px;
 	}
     .slick-next {
-        right: -40px;
+        right: -25px;
 	}
 	.singleBook {
 	max-width: 700px;
@@ -963,6 +967,12 @@ footer p:first-child {
         place-items: center;
         gap: 10px;
     }
+	.slick-prev {
+    left: -45px;
+	}
+    .slick-next {
+        right: -35px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -973,5 +983,8 @@ footer p:first-child {
         grid-template-rows: 1fr 1fr 1fr;
         
     }
-       
+    .calendarContainer {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+    }  
 }
