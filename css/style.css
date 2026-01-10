@@ -167,21 +167,20 @@ main h3 {
 form#keywords {
     margin: 1em auto;
 }
-/*
-fieldset {
+#keywords fieldset {
     border: solid 1px #000;
     border-radius: 4px;
     padding: .8em;
     margin-bottom: 2rem;
     max-width: 400px;
 }
-legend {
+#keywords legend {
     font-size: 1.6em;
     font-style: italic;
     color: #000;
     padding: 0 4px;
 }
-input[type=submit], input[type=reset] {
+#keywords input[type=submit], input[type=reset] {
     display: inline-block;
     background-color: #fff;
     padding: .5em .75em;
@@ -192,7 +191,6 @@ input[type=submit], input[type=reset] {
     border: solid 1px #000;
     border-radius: 4px;
 }
-*/
 
 /* homepage images */
 
@@ -216,15 +214,13 @@ figure img {
     border: solid 3px var(--primary-color);
     border-radius: 50%;
 }
-/*
-main a {
+#elibrary a {
     color: inherit;
     font-weight: bold;
 }
-main li {
+#elibrary li {
     padding-bottom: 15px;
 }
-*/
 
 /*--------------------------services page MOR*/
 
@@ -686,7 +682,7 @@ select#search {
 
 /* full width username and password inputs */
 
-input[type=text], input[type=password] {
+#userlogin input[type=text], #userlogin input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
