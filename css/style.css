@@ -194,12 +194,14 @@ form#keywords {
 
 /* homepage images */
 
+/*
 figure img {
     max-width: 300px;
     margin: 20px;
     border-radius: 14px;
     border: solid 1px var(--secondary-color);
 }
+*/
 
 /* homepage eLibrary section */
 
@@ -833,6 +835,13 @@ footer p:first-child {
     #forgotusername, #forgotpassword {
         float: right;
         padding-left: 15px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    #services {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
 
