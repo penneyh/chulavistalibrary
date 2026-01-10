@@ -803,11 +803,9 @@ footer p {
 footer p:first-child {
     padding-top: 15px;
 }
-/*
 #contactFooter {
-	font-weight: normal;
+	color: var(--primary-color);
 }
-*/
 #copyright {
     font-size: 1rem;
     text-align: center;    
