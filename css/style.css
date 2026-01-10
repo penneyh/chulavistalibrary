@@ -786,15 +786,13 @@ footer h4 {
     height: 20px;
     vertical-align: middle;
 }
-footer a {
-    color: var(--primary-color);
-    font-weight: bold;
-}  
 footer ul {
     padding: 0 5px 20px 0;
 }
 footer li:first-child {
     padding: 0 0 10px;
+	color: var(--primary-color);
+    font-weight: bold;
 }
 footer p {
     font-size: 1.4rem;
