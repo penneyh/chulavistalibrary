@@ -504,6 +504,41 @@ select#search {
 }
 */
 
+/* carousel single book page */
+
+.singleBook img {
+	height: 300px;
+}
+.singleBook p {
+    margin: 10px 0;
+}
+
+.singleBook {
+	padding: 20px;
+}
+
+.singleBook h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+	padding-top: 5px;
+}
+
+.singleBook h3 {
+    margin: 10px 0;
+}
+
+.singleBook h4 {
+    font-size: 1.4;
+	font-style: italic;
+	font-weight: 300;
+	padding-top: 15px;
+}
+
+.singleBookReturn {
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-align: right;
+}
 /* main */
 
 #contactTableMain {
@@ -867,10 +902,13 @@ footer p:first-child {
     /*catalog*/
     .slick-prev {
         left: -50px;
-}
+	}
     .slick-next {
         right: -40px;
-}
+	}
+	.singleBook {
+	max-width: 700px;
+	}
 	.contactForm {
 		max-width: 700px;
 	}
