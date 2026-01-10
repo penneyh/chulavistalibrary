@@ -791,7 +791,6 @@ footer ul {
 }
 footer li:first-child {
     padding: 0 0 10px;
-	color: var(--primary-color);
     font-weight: bold;
 }
 footer p {
@@ -804,9 +803,11 @@ footer p {
 footer p:first-child {
     padding-top: 15px;
 }
+/*
 #contactFooter {
 	font-weight: normal;
 }
+*/
 #copyright {
     font-size: 1rem;
     text-align: center;    
