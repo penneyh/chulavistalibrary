@@ -818,7 +818,7 @@ footer p:first-child {
 }
 
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 500px) {
     #services {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -838,12 +838,14 @@ footer p:first-child {
     }
 }
 
+/*
 @media screen and (min-width: 500px) {
     #services {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 }
+*/
 
 /* tablet */
 
