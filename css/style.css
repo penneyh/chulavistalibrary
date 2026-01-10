@@ -944,6 +944,7 @@ footer p:first-child {
     }
 }
 
+/*
 @media screen and (min-width: 900px) {
     
     #services {
@@ -952,11 +953,10 @@ footer p:first-child {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         
     }
-    #srchInput {
-        width: 30%;
-    }
+    
        
 }
+*/
 
 /* desktop */
 
@@ -977,6 +977,9 @@ footer p:first-child {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         place-items: center;
         gap: 10px;
+    }
+	#srchInput {
+        width: 30%;
     }
 	.slick-prev {
     left: -45px;
