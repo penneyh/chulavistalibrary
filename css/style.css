@@ -105,7 +105,7 @@ img {
     height: auto;
 }
 a {
-    color: var(--secondary-color);
+    color: var(--primary-color);
 	text-decoration: none;
 }
 a:hover {
@@ -832,7 +832,7 @@ footer p:first-child { padding-top: 15px; }
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
 	.applyFieldset {
-        display: grid;
+        display: inline-block;
         grid-template-columns: 200px 1fr;
         grid-template-rows: auto;
     }
