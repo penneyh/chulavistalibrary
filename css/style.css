@@ -157,8 +157,7 @@ nav a {
     display: block;
 	height: 36px;
 	font-size: 2rem;
-	padding: .3em .7em 1.6em .3em;
-    padding-top: .8em;
+	padding: .8em .7em 1.6em .3em;
     text-align: right;
 }
 nav input[type=checkbox]:checked ~ ul {display: block; }
@@ -188,9 +187,10 @@ form#keywords {
 #keywords fieldset {
     border: solid 1px #000;
     border-radius: 4px;
-    margin-bottom: 2rem;
-    max-width: 400px;
-	padding: .8em;
+    margin: 0 auto;
+    margin-top: 30px;
+	max-width: 500px;
+    padding: 1em 1em 1em 3em;
 }
 #keywords legend {
     color: #000;
@@ -234,6 +234,7 @@ img#bookSale {
 .cntFig {
     background-color: var(--secondary-color);
 	border-radius: 10px 10px 0 0;
+	font-size: 2rem;
     margin: 0 auto;
     padding: 10px;
 }
@@ -257,14 +258,16 @@ img#bookSale {
 .cntFig2 {
     background-color: var(--secondary-color);
 	border-radius: 10px 10px 0 0;
-    margin: 0 auto;
-	padding: 10px 97px;
+    font-size: 2rem;
+	margin: 0 auto;
+	padding: 10px 52px;
 }
 .cntFig3 {
     background-color: var(--secondary-color);
 	border-radius: 10px 10px 0 0;
-    margin: 0 auto;
-	padding: 10px 117px;
+    font-size: 2rem;
+	margin: 0 auto;
+	padding: 10px 80px;
 }
 .cntImg2 {
     border: solid 1px var(--secondary-color);
@@ -287,7 +290,16 @@ img#bookSale {
     color: inherit;
     font-weight: bold;
 }
-#elibrary li { padding-bottom: 15px; }
+#elibrary li { 
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 50px 50%;
+	padding-bottom: 15px; 
+	text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* 5.0 Catalog Page */
 /* 5.1 Search Form */
@@ -340,7 +352,7 @@ select#search {
 }
 .slick-slide { margin: 0 20px; }
 .slick-slide img { width: 100%; }
-.slick-prev { left: -35px; }
+.slick-prev { left: -30px; }
 .slick-next { right: -21px; }
 .slick-prev:before, .slick-next:before {
     color: var(--tertiary-color);
@@ -353,7 +365,6 @@ select#search {
     align-items: center;
 }
 .outerBox {
-    /*border: 4px solid #333;*/
     background-color: var(--primary-color);
 	border-radius: 15px;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.2);
@@ -364,8 +375,6 @@ select#search {
 	width: 70vw;
 }
 .carousel {
-    /*border: 2px solid #c448b5;*/
-    /*padding: 15px;*/
     background-color: #fff;
     width: 90%;
 }
@@ -516,9 +525,9 @@ h3.year {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 30px;
     place-items: center;
-    margin-bottom: 50px;
-    margin: 0 auto;
-	width: 80vw;
+    margin: 0 auto 50px;
+/*	margin-bottom: 50px;*/
+    width: 80vw;
 }
 .containerServ {
     background-color: var(--secondary-color);
@@ -1043,4 +1052,7 @@ footer p:first-child { padding-top: 15px; }
        display: grid;
        grid-template-columns: 1fr 1fr 1fr;
     }  
+	#imgHome {
+        width: 80vw;
+    }
 }
