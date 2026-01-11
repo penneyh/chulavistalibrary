@@ -54,17 +54,35 @@
             </section>
             <section>
                 <!-- volunteer forms -->
-                <form onsubmit="return validateCheckboxes()" action="mailto:group1@fewd2.edu" method="post" id="applyForm">
+                <form
+                    onsubmit="return validateCheckboxes()"
+                    action="mailto:group1@fewd2.edu"
+                    method="post"
+                    id="applyForm">
                     <fieldset class="applyFieldset">
                         <legend>Apply to Volunteer</legend>
                         <ul class="basics">
                             <li>
                                 <label for="first_name" class="applyLabel">First Name*: </label>
-                                <input type="text" id="applyFirst" name="first_name" value="" placeholder="first name" required autofocus />
+                                <input
+                                    type="text"
+                                    id="applyFirst"
+                                    name="first_name"
+                                    value=""
+                                    placeholder="first name"
+                                    required
+                                    autofocus />
                             </li>
                             <li>
                                 <label for="last_name" class="applyLabel">Last Name*: </label>
-                                <input type="text" id="applyLast" name="last_name" value="" placeholder="last name" required autofocus />
+                                <input
+                                    type="text"
+                                    id="applyLast"
+                                    name="last_name"
+                                    value=""
+                                    placeholder="last name"
+                                    required
+                                    autofocus />
                             </li>
                             <li>
                                 <label for="email" class="applyLabel">Email*: </label>
@@ -137,7 +155,7 @@
                             </li>
                         </ul>
                         <p>Language(s)*:</p>
-                        <ul class=applyCheckbox>
+                        <ul class=checkboxList>
                             <li>
                                 <input
                                     type="checkbox"
@@ -207,7 +225,7 @@
                             </li>
                         </ul>
                         <p>What day(s) are you available?*</p>
-                        <ul class="applyCheckbox">
+                        <ul class="checkboxList">
                             <li>
                                 <input type="checkbox" id="day1" name="day" value="sunday" class="availability" />
                                 <label for="sunday">Sunday</label>
@@ -238,7 +256,7 @@
                             </li>
                         </ul>
                         <p>Volunteer Location*:</p>
-                        <ul class="applyRadio">
+                        <ul class="radioList">
                             <li>
                                 <input type="radio" id="where1" name="where" value="civic" required />
                                 <label for="civic">Civic Center Branch Library</label>
@@ -266,7 +284,6 @@
                         const checkboxes = document.querySelectorAll(".languages");
                         let isChecked = false;
                         // Check if at least one day is selected
-
                         for (let i = 0; i < checkboxes.length; i++) {
                             if (checkboxes[i].checked) {
                                 isChecked = true;
