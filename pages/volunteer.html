@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Volunteer page for the Chula Vista Library | You can find volunteer opportunities at all three branches of the Chula Vista Library as well as the Friends of the Library Bookstore." />
+        <meta name="author" content="Penney Holland, Maria Ocampo-Ross, Tiffany Poon" />
+        <title>Chula Vista Library - Volunteer Page</title>
+        <!-- material icons -->
+        <!-- an error is popping up on the validator for the line below -->
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+            rel="stylesheet" />
+        <!-- font awesome icons -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            rel="stylesheet"
+            type="text/css" />
+        <!--jQuery-->
+        <link rel="stylesheet" href="../css/slick.css" />
+        <link rel="stylesheet" href="../css/slick-theme.css" />
+        <!-- global styles -->
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/style.css" />
+        <script src="../scripts/jq-min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <section>
+                    <img src="../images/logowhite.svg" alt="library logo" class="logo" />
+                    <label for="showMenu" class="showMenu">
+                        <span class="fa-solid fa-bars"></span>
+                    </label>
+                </section>
+                <!-- validator error, line below requires aria pressed attribute -->
+                <input type="checkbox" id="showMenu" role="button" />
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../pages/catalog.html">Catalog</a></li>
+                    <li><a href="../pages/calendar.html">Calendar</a></li>
+                    <li><a href="../pages/services.html">Services</a></li>
+                    <li>
+                        <a href="../pages/login.html"
+                            ><img src="../images/user.svg" alt="user icon" id="user" />My Account</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+           <h1 class="catalogTitle">SUPPORT THE LIBRARY</h1>
+            <section class="supportLibrary">
+                <h2>Friends of the Chula Vista Library</h2>
+                <p>Founded in 1968, Friends of the Chula Vista Library is a nonprofit, 501(c)(3) organization dedicated to the support of the Chula Vista Public Library and the Heritage Museum through advocacy, fundraising and volunteerism.</p>
+                <h2>Chula Vista Public Library Foundation</h2>
+                <p>The Chula Vista Public Library Foundation was created a as non-profit, charitable foundation for the purpose of helping raise additional funds from the community and to involve area business professionals, philanthropists, and community members with the Library and its vital community programs.</p>
+                <h2>Volunteer Opportunities</h2>
+                <p>We have volunteer opportunities at all three branch library locations as well as through the Friends of the Library. Volunteers assist with tutoring, homework help, shelving materials, and many other tasks. Volunteers must commit to a minimum of one hour per week for six months.</p>
+            </section>
+            <section>
+                <!-- volunteer forms -->
+                <form
+                    onsubmit="return validateCheckboxes()"
+                    action="mailto:group1@fewd2.edu"
+                    method="post"
+                    id="applyForm">
+                    <fieldset class="applyFieldset">
+                        <legend>Apply to Volunteer</legend>
+                        <ul class="basics">
+                            <li>
+                                <label for="first_name" class="applyLabel">First Name*: </label>
+                                <input
+                                    type="text"
+                                    id="applyFirst"
+                                    name="first_name"
+                                    value=""
+                                    placeholder="first name"
+                                    required
+                                    autofocus />
+                            </li>
+                            <li>
+                                <label for="last_name" class="applyLabel">Last Name*: </label>
+                                <input
+                                    type="text"
+                                    id="applyLast"
+                                    name="last_name"
+                                    value=""
+                                    placeholder="last name"
+                                    required
+                                    autofocus />
+                            </li>
+                            <li>
+                                <label for="email" class="applyLabel">Email*: </label>
+                                <input
+                                    type="email"
+                                    id="applyEmail"
+                                    name="email"
+                                    value=""
+                                    placeholder="your@email.com"
+                                    required />
+                            </li>
+                            <li>
+                                <label for="phone" class="applyLabel">Phone: </label>
+                                <input
+                                    type="text"
+                                    id="applyPhone"
+                                    name="phone"
+                                    value=""
+                                    placeholder="(___)___-____"
+                                    required />
+                            </li>
+                            <li>
+                                <label for="birthdate" class="applyLabel">Date of Birth*:</label>
+                                <input
+                                    type="text"
+                                    id="applyBirthdate"
+                                    name="birthdate"
+                                    value=""
+                                    placeholder="mm/dd/yyyy"
+                                    required />
+                            </li>
+                            <li>
+                                <label for="street" class="applyLabel">Address*:</label>
+                                <input
+                                    type="text"
+                                    id="applyStreet"
+                                    name="street"
+                                    value=""
+                                    placeholder="street address"
+                                    required />
+                            </li>
+                            <li>
+                                <label for="unit" class="applyLabel"></label>
+                                <input type="text" id="applyUnit" name="unit" value="" placeholder="apartment number" />
+                            </li>
+                            <li>
+                                <label for="city" class="applyLabel"></label>
+                                <input type="text" id="applyCity" name="city" value="" placeholder="city" required />
+                            </li>
+                            <li>
+                                <label for="state" class="applyLabel"></label>
+                                <input
+                                    type="text"
+                                    id="applyState"
+                                    name="state"
+                                    value=""
+                                    placeholder="state"
+                                    required />
+                            </li>
+                            <li>
+                                <label for="zip" class="applyLabel"></label>
+                                <input type="text" id="applyZip" name="zip" value="" placeholder="zip code" required />
+                            </li>
+                            <li>
+                                <label for="notes" class="applyLabel">Notes/Questions:</label>
+                                <textarea
+                                    name="notes"
+                                    id="applyText"
+                                    placeholder="add your notes and questions here."></textarea>
+                            </li>
+                        </ul>
+                        <p>Language(s)*:</p>
+                        <ul class=applyCheckbox>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language1"
+                                    name="language"
+                                    value="english"
+                                    class="languages" />
+                                <label for="english">English</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language2"
+                                    name="language"
+                                    value="spanish"
+                                    class="languages" />
+                                <label for="spanish">Spanish</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language3"
+                                    name="language"
+                                    value="mandarin"
+                                    class="languages" />
+                                <label for="mandarin">Mandarin</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language4"
+                                    name="language"
+                                    value="cantonese"
+                                    class="languages" />
+                                <label for="cantonese">Cantonese</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language5"
+                                    name="language"
+                                    value="tagalog"
+                                    class="languages" />
+                                <label for="tagalog">Tagalog</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language6"
+                                    name="language"
+                                    value="vietnamese"
+                                    class="languages" />
+                                <label for="vietnamese">Vietnamese</label>
+                            </li>
+                            <li>
+                                <input
+                                    type="checkbox"
+                                    id="language7"
+                                    name="language"
+                                    value="korean"
+                                    class="languages" />
+                                <label for="korean">Korean</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="language8" name="language" value="other" class="languages" />
+                                <label for="other">Other</label>
+                            </li>
+                        </ul>
+                        <p>What day(s) are you available?*</p>
+                        <ul class="applyCheckbox">
+                            <li>
+                                <input type="checkbox" id="day1" name="day" value="sunday" class="availability" />
+                                <label for="sunday">Sunday</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="day2" name="day" value="monday" class="availability" />
+                                <label for="monday">Monday</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="day3" name="day" value="tuesday" class="availability" />
+                                <label for="tuesday">Tuesday</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="day4" name="day" value="wednesday" class="availability" />
+                                <label for="wednesday">Wednesday</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="day5" name="day" value="thursday" class="availability" />
+                                <label for="thursday">Thursday</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="day6" name="day" value="friday" class="availability" />
+                                <label for="friday">Friday</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="day7" name="day" value="saturday" class="availability" />
+                                <label for="saturday">Saturday</label>
+                            </li>
+                        </ul>
+                        <p>Volunteer Location*:</p>
+                        <ul class="applyRadio">
+                            <li>
+                                <input type="radio" id="where1" name="where" value="civic" required />
+                                <label for="civic">Civic Center Branch Library</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="where2" name="where" value="friends" required />
+                                <label for="friends">Friends of the Library Bookstore</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="where3" name="where" value="otay" required />
+                                <label for="otay">Otay Ranch Branch Library </label>
+                            </li>
+                            <li>
+                                <input type="radio" id="where4" name="where" value="south" required />
+                                <label for="south">South Chula Vista Branch Library</label>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <input type="submit" id="applySubmit" name="submit" value="Submit" />
+                </form>
+                <script>
+                    function validateCheckboxes() {
+                        // Get all checkboxes in list of languages
+                        const checkboxes = document.querySelectorAll(".languages");
+                        let isChecked = false;
+                        // Check if at least one day is selected
+
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].checked) {
+                                isChecked = true;
+                                break; // Exit the loop as one day is found
+                            }
+                        }
+                        // If no days are checked, prevent form submission and alert user
+                        if (!isChecked) {
+                            alert("You must select at least one day of the week.");
+                            return false; // Prevent form submission
+                        }
+                        return true; // Allow form submission
+                    }
+                </script>
+                <script>
+                    function validateCheckboxes() {
+                        // Get all checkboxes in days of availability
+                        const checkboxes = document.querySelectorAll(".availability");
+                        let isChecked = false;
+
+                        // Check if at least one day is selected
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].checked) {
+                                isChecked = true;
+                                break; // Exit the loop as one day is found
+                            }
+                        }
+
+                        // If no days are checked, prevent form submission and alert user
+                        if (!isChecked) {
+                            alert("You must select at least one day of the week.");
+                            return false; // Prevent form submission
+                        }
+                        return true; // Allow form submission
+                    }
+                </script>
+            </section>
+        </main>
+
+        <footer>
+            <section id="darkfooter">
+                <p><img src="../images/logoblue.svg" alt="library logo" class="logo" /></p>
+                <ul id="socials">
+                    <li><img src="../images/facebook.svg" alt="facebook icon" class="social" /></li>
+                    <li><img src="../images/instagram.svg" alt="instagram icon" class="social" /></li>
+                    <li><img src="../images/youtube.svg" alt="youtube icon" class="social" /></li>
+                    <li><img src="../images/x.svg" alt="x icon" class="social" /></li>
+                </ul>
+            </section>
+            <h4>Locations:</h4>
+            <section id="lightfooter">
+                <img src="../images/location.svg" alt="location pin" class="pin" />
+                <ul>
+                    <li>Civic Center Branch Library</li>
+                    <li>365 F Street</li>
+                    <li>Chula Vista, CA 91910</li>
+                    <li>(619) 691 - 5069</li>
+                </ul>
+                <img src="../images/location.svg" alt="location pin" class="pin" />
+                <ul>
+                    <li>Otay Ranch Branch Library</li>
+                    <li>2015 Birch Rd, Ste 1103</li>
+                    <li>Chula Vista, CA 91915</li>
+                    <li>(619) 397 - 5740</li>
+                </ul>
+                <img src="../images/location.svg" alt="location pin" class="pin" />
+                <ul>
+                    <li>South Chula Vista Branch Library</li>
+                    <li>389 Orange Ave</li>
+                    <li>Chula Vista, CA 91911</li>
+                    <li>(619) 585 - 6755</li>
+                </ul>
+                <img src="../images/location.svg" alt="location pin" class="pin" />
+                <ul>
+                    <li>Friends of the Library Bookstore</li>
+                    <li>365 F Street</li>
+                    <li>Chula Vista, CA 91910</li>
+                    <li>(619) 691 - 5069</li>
+                </ul>
+            </section>
+            <section>
+                <p>About the Library</p>
+                <p>Frequently Asked Questions</p>
+                <p>
+                    <a href="../pages/contact.html" id="contactFooter"
+                        ><img src="../images/envelope.svg" alt="email icon" class="pin" /> Contact Us</a
+                    >
+                </p>
+                <p id="copyright">&copy; 2025 FEWD2 Group 1</p>
+            </section>
+        </footer>
+    </body>
+</html>
