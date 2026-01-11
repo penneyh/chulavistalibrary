@@ -1,4 +1,70 @@
-/* global variables */
+/*
+ TABLE OF CONTENTS
+________________________
+    1.0 Project detals / Color and typography info 
+    2.0 Global Styles
+    3.0 Header and Nav
+		3.1 Header
+		3.2 Navigation
+		3.3 Hero
+		3.4 Motto
+	4.0 Main
+		4.1 Homepage Search
+		4.2 Homepage Main
+		4.3 Homepage eLibrary
+	5.0 Catalog Page
+		5.1 Search Form
+		5.2 Carousel Styles
+		5.3 Slick Plugin Styles
+		5.4 Catalog Single Book Page
+		5.5 Carousel - Homepage
+	6.0 Calendar Page
+		6.1 Calendar Single Event Page
+	7.0 Services Page
+		7.1 Services Page Links
+		7.2 Volunteer Page
+			7.2.1 Volunteer Page Form
+	8.0 Contact Page
+		8.1 Contact Page Table
+		8.2 Contact Page Form
+		8.3 Locations Page
+	9.0 My Account Page
+		9.1 My Account Page Buttons
+		9.2 My Account User Icon Image
+		9.3 My Account Avatar Image
+		9.4 My Account Container Padding
+		9.5 My Account Forgot Password
+    10.0 Footer
+    11.0 Media Queries
+		11.1 Media Queries Min-Width 500px
+		11.2 Media Queries Min-Width 700px - Tablet
+		11.3 Media Queries Min-Width 1000px - Desktop
+		11.4 Media Queries Min-Width 1200px - Larger Screens
+*/
+
+/* 1.0 Project details / color and typography info 
+        Project details
+Author: Penney Holland, Maria Ocampo-Ross, Tiffany Poon
+Project: Chula Vista Library website - Group 1
+Ver: 1.1
+Last Updated: 1/10/2025
+Notes: This is a possible redesign of the existing Chula Vista Library website. This is presented by group 1 of FEWD 2.
+---------------------
+
+        Color Guide
+navy blue (headlines, various standout text): #19457f
+medium green-cyan (various backgrounds, some headlines, calendar): #8ea499
+burnt orange (carousel and page header backgrounds, learn more links): #cb6f18
+black #000
+white #fff
+---------------------
+
+    Typography Guide
+headings: Cambria, Georgia, sans-serif
+body: Verdana, Arial, sans-serif
+*/
+
+/* 2.0 Global Styles */
 :root {
     --main-font: Verdana, Arial sans-serif;
     --headline-font: Cambria, Georgia, sans-serif;
@@ -7,36 +73,26 @@
     --tertiary-color: #cb6f18;
     --border-radius: 6px;
 }
-
-/* main styles */
-
 html { font-size: 10px; }
-
 body { font-family: var(--main-font); }
-
 h1 { 
 	font: 3rem var(--headline-font); 
     margin-bottom: 5px;
 }
-
 h2 {
     font: 2.5rem var(--headline-font);
     margin-bottom: 5px;
 }
-
 h3 {
     font-size: 2rem;
     margin-bottom: 5px;
 }
-
 h4 { 
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 p { font-size: 1.6rem; }
-
 figcaption {
     color: #000;
     font-size: 1.4em;
@@ -44,40 +100,32 @@ figcaption {
     text-align: center;
     margin: .5em;
 }
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 a {
-    text-decoration: none;
     color: var(--secondary-color);
+	text-decoration: none;
 }
-
 a:hover {
     color: var(--tertiary-color); /* change to default color at later time */
 }
 
-
-/* header */
-
+/* 3.0 Header and Nav */
+/* 3.1 Header */
 header {
     background-size: cover;
     color: #fff;
 }
-.logo {
-    height: 70px;
-}
+.logo { height: 70px; }
 
-
-/* navigation */
-
+/* 3.2 Navigation */
 nav {
-    position: static;
-	width: 100%;
-    top: 0;
     background-color: var(--primary-color);
+	position: static;
+	top: 0;
+	width: 100%;
 }
 nav section {
     display: flex;
@@ -89,17 +137,15 @@ nav ul {
     display: none;
 }
 nav li {
-    text-align: center;
     border-bottom: solid 1px #fff;
+	text-align: center;
     vertical-align: middle;
 }
-nav li:first-child {
-    border-top: solid 1px #fff;
-}
+nav li:first-child { border-top: solid 1px #fff; }
 nav a {
     color: #fff;
-    padding: .8em;
     display: block;
+	padding: .8em;
 }
 #user {
     height: 2rem;
@@ -107,385 +153,215 @@ nav a {
 }
 .showMenu {
     color: #fff;
-    text-align: right;
-    padding: .3em .7em 1.6em .3em;
+	cursor: pointer;
     display: block;
-    cursor: pointer;
-    font-size: 2rem;
+	height: 36px;
+	font-size: 2rem;
+	padding: .3em .7em 1.6em .3em;
     padding-top: .8em;
-    height: 36px;
+    text-align: right;
 }
-nav input[type=checkbox]:checked ~ ul {display: block;
-}
+nav input[type=checkbox]:checked ~ ul {display: block; }
 nav input[type=checkbox] { display: none; }
 
-/* hero */
-
+/* 3.3 Hero */
 #hero {
-    background-image: url(../images/south-small.jpg);
+	background: url(../images/south-small.jpg) no-repeat center/cover;
     height: 25vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 }
 
-/* motto */
-
+/* 3.4 Motto */
 #motto {
     background-color: var(--primary-color);
     color: #fff;
     font-style: italic;
-    text-align: center;
     padding: 15px;
+	text-align: center;
 }
 
-/*
-main {
-    padding-top: 70px;
-}
-main h2 { 
-    font-size: 1.6rem; 
-    font-weight: bold;
-    background-color: var(--secondary-color);
-    padding: 10px 0;
-    text-align: center;
-}
-main h3 {
-    background-color: var(--primary-color);
-    font: 10px var(--headline-font);
-    font-size: 1.4rem;
-    color: #fff;
-    font-style: italic;
-    text-align: center;
-    padding: 20px;
-}
-*/
-
-/* Search */
-
+/* 4.0 Main */
+/* 4.1 Homepage Search */
 form#keywords {
     margin: 1em auto;
 }
 #keywords fieldset {
     border: solid 1px #000;
     border-radius: 4px;
-    padding: .8em;
     margin-bottom: 2rem;
     max-width: 400px;
+	padding: .8em;
 }
 #keywords legend {
-    font-size: 1.6em;
-    font-style: italic;
     color: #000;
+	font-size: 1.6em;
+    font-style: italic;
     padding: 0 4px;
 }
+/*
 #keywords input[type=submit], input[type=reset] {
-    display: inline-block;
     background-color: #fff;
-    padding: .5em .75em;
-    margin: 0 1em 2em 0;
-    width: inherit;
+	border: solid 1px #000;
+    border-radius: 4px;
+    display: inline-block;
+	margin: 0 1em 2em 0;
+	padding: .5em .75em;
     min-width: inherit;
     max-width: inherit;
-    border: solid 1px #000;
-    border-radius: 4px;
-}
-
-/* homepage images */
-
-/*
-figure img {
-    max-width: 300px;
-    margin: 20px;
-    border-radius: 14px;
-    border: solid 1px var(--secondary-color);
+	width: inherit;
 }
 */
 
-/* homepage eLibrary section */
+/* 4.2 Homepage Main */
+Input#search { width: 60%; }
+img#bookSale {
+    border: solid 1px #003314;
+	border-radius: 10%;
+}
+.cntHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cntHome2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 10px;
+}
+.cntFig {
+    background-color: var(--secondary-color);
+	border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+    padding: 10px;
+}
+.cntImg {
+    border: solid 1px var(--secondary-color);
+	border-radius: 0 0 10px 10px;
+}
+.imgSpotlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cntSpotlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 10px;
+}
+.cntFig2 {
+    background-color: var(--secondary-color);
+	border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+	padding: 10px 97px;
+}
+.cntFig3 {
+    background-color: var(--secondary-color);
+	border-radius: 10px 10px 0 0;
+    margin: 0 auto;
+	padding: 10px 117px;
+}
+.cntImg2 {
+    border: solid 1px var(--secondary-color);
+	border-radius: 0 0 10px 10px;
+}
 
+/* 4.3 Homepage eLibrary */
 #elibrary ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .library {
-    height: 70px;
-    padding: 10px;
-    margin: 10px;
     border: solid 3px var(--primary-color);
     border-radius: 50%;
+	height: 70px;
+    margin: 10px;
+	padding: 10px;
 }
 #elibrary a {
     color: inherit;
     font-weight: bold;
 }
-#elibrary li {
-    padding-bottom: 15px;
-}
+#elibrary li { padding-bottom: 15px; }
 
-/*--------------------------services page MOR*/
-
-.servHero {
-    /*background: center center / cover no-repeat;*/
-    /*background: url('../images/servicesHerosml2.jpg') center center / cover no-repeat;*/
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: 100%;
-    min-height: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);
-}
-
-.headerContainer h1 {
-    color: var(--primary-color);
-    text-align: center;
-    padding-bottom: 10px;
-    background-color: var(--tertiary-color);
-}
-/*---------------------------------------------Services page links MOR*/
-#services {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 30px;
-    place-items: center;
-    margin-bottom: 50px;
-    width: 80vw;
-    margin: 0 auto;
-}
-.containerServ {
-    width: 200px;
-    height: 170px;
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);
-    /*margin: 30px;*/
-}
-.containerServ img {
-    width: 150px;
-    height: auto;
-    padding-top: 20px;
-}
-.containerServ h3 {
-    color: var(--primary-color);
-    text-align: center;
-    font-size: 1.5rem;
-    padding-top: 10px;
-    font-weight: bold;
-}
-/*
-.containerServ a {
-    color: var(--primary-color);
-    text-decoration: none;
-	font-size: 1.5rem;
-}
-*/
-/*
-#hSchool {
-    font-size: 1.5rem;
-}
-*/
-
-/*-----------------------------------------------calendar mor*/
-#cal {
-    margin-bottom: 30px;
-    text-align: center;
-    background-color: var(--tertiary-color);
-    color: var(--primary-color);
-    padding: 10px;
-}
-.calendarContainer {
-    font-family: var(--main-font);
-/*    max-width: 800px;*/
-    margin: 0 20px;
-}
-h2.eventTittle {
-    color: var(--primary-color);
-    padding: 5px;
-}
-h3.year {
-    font-size: 20px;
-    text-align: center;
-    border-bottom: 1px solid #b1b1b1;
-    width: 70vw;
-    margin: 0 auto;
-}
-
-.event {
-    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
-    display: flex;
-    border-radius: 8px;
-    margin: 32px 0;
-}
-
-.event .eventLeft {
-    background-color: var(--secondary-color);
-    font-size: 1.5rem;
-    /*min-width: 82px;*/
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    padding: 8px 20px;
-    /*margin-right: 16px;*/
-    border-radius: 8px 0 0 8px;
-}
-
-.event .eventLeft .date {
-    font-size: 2.5rem;
-}
-
-.eventRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 24px;
-}
-.eventDescription a {
-    color: var(--tertiary-color);
-}
-
-.eventTime {
-    font-size: 1.2rem;
-    padding: 10px 0;
-}
-
-/*-----------------------------------------------calendar - single event page mor*/
-
-.singleEvent {
-	padding: 20px;
-}
-
-.singleEvent h2 {
-    color: var(--primary-color);
-    font-weight: bold;
-	padding-top: 15px;
-}
-
-.singleEvent h3 {
-    margin: 10px 0;
-}
-
-.singleEvent p {
-    margin: 10px 0;
-}
-
-.singleEventReturn {
-    color: var(--secondary-color);
-    font-weight: 500;
-    text-align: right;
-}
-
-/*--------------------------------------------------- Catalog Page mor*/
-/*Form*/
+/* 5.0 Catalog Page */
+/* 5.1 Search Form */
 select#search {
-    max-width: 20%;
-    min-width: 100px;
-    height: 30px;
-    font-size: 1.6rem;
     color: #666;
+	font-size: 1.6rem;
+	height: 30px;
     margin-bottom: 2em;
+	max-width: 20%;
+    min-width: 100px;
 }
 #srchLabel {
     font-size: 2rem;
     margin-left: 10%;
 }
 #srchInput {
-    width: 250px;
-    height: 25px;
     font-size: 1.6rem;
     margin: 0 0 2em 1em;
+	height: 25px;
+	width: 250px;
 }
 #srchBtn {
     height: 30px;
     font-size: 1.5rem;
     margin-bottom: 2em;
-    
 }
 
+/* 5.2 Carousel Styles */
 .catalogTitle {
     background-color: var(--tertiary-color);
-    padding: 10px;
-    margin-bottom: 30px;
-    text-align: center;
     color: var(--primary-color);
+	margin-bottom: 30px;
+	padding: 10px;
+    text-align: center;
 }
 .carouselTitle h2 {
-    margin: 40px 0 10px 15%;
+    background-color: var(--tertiary-color);
+	border-radius: 15px;
     color:  var( --primary-color);
     font-weight: bold;
-    background-color: var(--tertiary-color);
     max-width: fit-content;
-    padding: 10px;
-    border-radius: 15px;
-}
-/*--------------------------Home Carousel MOR*/
-.homeH2 {
-    background-color: var(--secondary-color);
-    font-weight: bold;
-    margin: 0 auto;
-    border-radius: 0;
-    text-align: center;
+	margin: 40px 0 10px 15%;
     padding: 10px;
 }
-/*--secondary-color --tertiary-color  --primary-color*/
-/*------------------------------------------------------- Catalog Page Carrousel--mor*/
 
+/* 5.3 Slick Plugin Styles */
 .slider {
-    width: 50%;
     margin: 100px auto;
+	width: 50%;
 }
-
-.slick-slide {
-    margin: 0 20px;
-}
-
-.slick-slide img {
-    width: 100%;
-}
-.slick-prev {
-    left: -35px;
-}
-.slick-next {
-    right: -21px;
-}
-.slick-prev:before,
-.slick-next:before {
+.slick-slide { margin: 0 20px; }
+.slick-slide img { width: 100%; }
+.slick-prev { left: -35px; }
+.slick-next { right: -21px; }
+.slick-prev:before, .slick-next:before {
     color: var(--tertiary-color);
     font-size: 30px;
 }
-/*
-.slick-track {
-    margin: 30px;
-    border: solid 1px black;
-}
-*/
-.slick-list {
-    background-color: var(--tertiary-color);
-}
-.outerBox,
-.carousel {
+.slick-list { background-color: var(--tertiary-color); }
+.outerBox, .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .outerBox {
     /*border: 4px solid #333;*/
-    border-radius: 15px;
-    padding: 20px;
-    padding-top: 40px;
-    width: 70vw;
-    height: auto;
     background-color: var(--primary-color);
-    margin: 20px auto;
+	border-radius: 15px;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.2);
+	margin: 20px auto;
+	padding: 20px;
+    padding-top: 40px;
+    height: auto;
+	width: 70vw;
 }
 .carousel {
     /*border: 2px solid #c448b5;*/
@@ -497,69 +373,250 @@ select#search {
     height: 200px;
     width: auto;
 }
-/*
-.outerBox, .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-*/
 
-/* carousel single book page */
-
+/* 5.4 Catalog Single Book Page */
+.singleBook { padding: 0 15px; }
 .singleBook img {
+	border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 	height: 300px;
 }
-.singleBook p {
-    margin: 10px 0;
-}
-
-.singleBook {
-	padding: 20px;
-}
-
 .singleBook h2 {
     color: var(--primary-color);
     font-weight: bold;
-	padding-top: 5px;
+	padding: 5px 0;
 }
-
-.singleBook h3 {
-    margin: 10px 0;
-}
-
+.aboutAuthor { font-style: italic; }
+.singleBook h3 { margin: 10px 0 20px; }
 .singleBook h4 {
-    font-size: 1.4;
 	font-style: italic;
 	font-weight: 300;
-	padding-top: 15px;
+	padding: 15px 0;
 }
-
+.singleBook p {
+    color: #555;
+	line-height: 1.5;
+	margin: 10px 0;
+    padding: 0 10px 0;
+}
+#authorImage { height: 200px; }
 .singleBookReturn {
     color: var(--secondary-color);
     font-weight: 500;
     text-align: right;
 }
-/* main */
 
-#contactTableMain {
-    padding: 10px;
-    margin: auto;
+/* 5.5 Carousel - Homepage */
+.homeH2 {
+    background-color: var(--secondary-color);
+    border-radius: 0;
+	font-weight: bold;
+    margin: 0 auto;
+	padding: 10px;
+    text-align: center;
 }
 
-/* contact table */
+/* 6.0 Calendar Page */
+#cal {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+	margin-bottom: 30px;
+    padding: 10px;
+	text-align: center;
+}
+.calendarContainer {
+    font-family: var(--main-font);
+/*    max-width: 800px;*/
+    margin: 0 20px;
+}
+h2.eventTittle {
+    color: var(--primary-color);
+    padding: 5px;
+}
+h3.year {
+    border-bottom: 1px solid #b1b1b1;
+	font-size: 20px;
+    margin: 0 auto;
+	text-align: center;
+	width: 70vw;
+}
+.event {
+    box-shadow: 0 4px 16px -8px rgba(0, 0, 0, 0.4);
+    margin: 32px 0;
+	display: flex;
+    border-radius: 8px;
+}
+.event .eventLeft {
+    background-color: var(--secondary-color);
+    border-radius: 8px 0 0 8px;
+	color: var(--primary-color);
+    font-size: 1.5rem;
+    padding: 8px 20px;
+    /*margin-right: 16px;*/
+    /*min-width: 82px;*/
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.event .eventLeft .date { font-size: 2.5rem; }
+.eventRight {
+    padding: 0 24px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.eventDescription a { color: var(--tertiary-color); }
+.eventTime {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+/* 6.1 Calendar Single Event Page */
+.singleEvent { padding: 20px; }
+.singleEvent h2 {
+    color: var(--primary-color);
+    font-weight: bold;
+	padding-top: 15px;
+}
+.singleEvent h3 { margin: 10px 0; }
+.singleEvent p { margin: 10px 0; }
+.singleEventReturn {
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-align: right;
+}
+
+/* 7.0 Services Page */
+.servHero {
+    /*background: center center / cover no-repeat;*/
+    /*background: url('../images/servicesHerosml2.jpg') center center / cover no-repeat;*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);
+	max-width: 100%;
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.headerContainer h1 {
+    background-color: var(--tertiary-color);
+	color: var(--primary-color);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* 7.1 Services Page Links */
+#services {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    place-items: center;
+    margin-bottom: 50px;
+    margin: 0 auto;
+	width: 80vw;
+}
+.containerServ {
+    background-color: var(--secondary-color);
+	box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);
+	height: 170px;
+	width: 200px;
+    display: flex;
+    justify-content: center;
+    /*margin: 30px;*/
+}
+.containerServ img {
+    height: auto;
+	width: 150px;
+    padding-top: 20px;
+}
+.containerServ h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+	font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
+}
+
+/* 7.2 Volunteer Page */
+.supportLibrary h2 { color: var(--primary-color); }
+.supportLibrary p {
+    color: var(--secondary-color);
+	line-height: 1.5;
+    padding: 10px 10px 20px;
+}
+
+/* 7.2.1 Volunteer Page Form */
+.supportLibrary, .applyFieldset { padding: 0 15px; }
+.applyFieldset {
+    border: solid 1px #000;
+    border-radius: 4px;
+	margin: 2rem 1rem;
+	padding: 2rem 1rem;
+}
+.applyFieldset legend {
+    color: var(--primary-color);
+	font-size: 2rem;
+	font-style: italic;
+    padding: 0 5px;
+}
+.applyLabel {
+    color: var(--secondary-color);
+	font-size: 1.6rem;
+    display: block;
+    margin: 15px 5px 5px 0;
+}
+.basics input {
+    display: block;
+	width: 90%;
+}
+.applyFieldset p {
+    color: var(--secondary-color);
+    padding: 1rem 0;
+}
+.applyFieldset input, #applyText {
+    border: solid 1px #888;
+    border-radius: 4px;
+	font-size: 1.4rem;
+    margin-top: 5px;
+	padding: 8px;
+}
+#applyText {
+    height: 100px;
+	width: 90%;
+}
+#applySubmit {
+    background-color: var(--primary-color);
+    border: none;
+	border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    padding: 14px 20px;
+	width: 100%;
+}
+
+/* 8.0 Contact Page */
+#contactTableMain {
+    margin: auto;
+	padding: 10px;
+}
+
+/* 8.1 Contact Page Table */
 .contactTable { 
     font-size: 1.6rem;
-    padding: 10px; 
-    margin: 20px 0; 
+    margin: 20px 0;
+	padding: 10px; 
 }
 .contactTable th {
-    font-size: 2rem;
-    font-weight: 600;
     color: var(--primary-color);
+	font-size: 2rem;
+    font-weight: 600;
+	padding: 6px;
     text-align: left;
-    padding: 6px;
 }
 .contactTable td {
     padding: 6px;
@@ -567,206 +624,164 @@ select#search {
     vertical-align: top;
     width: 50%;
 }
-
 .contactLocation {
+	margin: 20px 0;
 	padding: 10px; 
-    margin: 20px 0;
 }
-/* contact page form styles */
 
+/* 8.2 Contact Page Form */
 .contactForm {
-    padding: 10px;
     margin: 10px 0;
+	padding: 10px;
 }
-
 .contactFieldset {
-    padding: 1em;
-    margin: 2em 0;
     border: solid 1px #000;
+	margin: 2em 0;
+	padding: 1em;
 }
-
 .contactLegend {
-    padding: 0 5px;
+    color: var(--primary-color);
     font-style: italic;
     font-size: 2rem;
-    color: var(--primary-color);
+    padding: 0 5px;
 }
-
 .contactFieldset label {
-    width: 175px;
+	color: var(--secondary-color);
+	display: inline-block;
+    font-size: 1.6rem;
+    margin-right: 5px;
     text-align: right;
-    font-size: 1.6rem;
-    color: var(--secondary-color);
-    vertical-align: top;
-    margin-right: 5px;
-    display: inline-block;
+	vertical-align: top;
+	width: 175px;
 }
-
 .contactFieldset input {
-    margin-right: 5px;
     margin-bottom: 5px;
+	margin-right: 5px;
 }
-
 #contactTextArea, #contactComments {
-    width: 100%;
-    text-align: left;
-    font-size: 1.6rem;
     color: var(--secondary-color);
-    vertical-align: top;
+	/*display: inline-block;*/
+    font-size: 1.6rem;
+ 	margin-bottom: 5px;
     margin-right: 5px;
-    margin-bottom: 5px;
-    /*display: inline-block;*/
-}
-
-#commentType {
     text-align: left;
-    margin: 10px 5px;
+	vertical-align: top;
+	width: 100%;
 }
-
+#commentType {
+    margin: 10px 5px;
+	text-align: left;
+}
 #contactMessage {
-    width: 75%;
     height: 60px;
-    margin: 10px 5px;
+    width: 75%;
+	margin: 10px 5px;
 }
-
 #contactSubmit {
-    padding: 4px 8px;
     background-color: var(--primary-color);
-    color: #fff;
-    font-weight: bold;
     border-radius: 8px;
     border-color: transparent;
-    width: 100px;
-    cursor: pointer;
+	color: #fff;
+	cursor: pointer;
+    font-weight: bold;
+    padding: 4px 8px;
+	width: 100px;
 }
 
-/* locations page */
-
+/* 8.3 Locations Page */
 .branchStyles {
     font-size: 1.6rem;
     padding: 6px;
 }
-
-.branchStyles li {
-    margin: 10px 0;
-}
-
+.branchStyles li { margin: 10px 0; }
 .branchName {
     font-size: 2rem;
     font-weight: 600;
 }
-
 .mapIcon {
     color: var(--primary-color);
     font-size: 20px;
+	vertical-align: middle;
 }
-
 .locationsHR {
-    margin-left: 0;
-	margin-right: auto;
     border: solid 3px var(--tertiary-color);
     margin-bottom: 15px;
-    width: 150px;
+	margin-left: 0;
+	margin-right: auto;
+	width: 150px;
 }
 
-/* login page */
-
-/* bordered form */
-
-#login {
-    border: 3px solid #f1f1f1;
-}
-
-#userlogin h1 {
-    padding-bottom: 15px;
-}
-
+/* 9.0 My Account Page */
+#login { border: 3px solid #f1f1f1; }
+#userlogin h1 { padding-bottom: 15px; }
 #create {
     display: block;
     float: none;
 }
-
-/* full width username and password inputs */
-
 #userlogin input[type=text], #userlogin input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
     border: 1px solid #ccc;
-    box-sizing: border-box;
     border-radius: 4px;
+	box-sizing: border-box;
+	display: inline-block;
+    margin: 8px 0;
+    padding: 12px 20px;
+    width: 100%;
 }
 
-/* buttons */
-
+/* 9.1 My Account Page Buttons */
 #cancel, #userlogin button {
     background-color: var(--primary-color);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
     border: none;
+	border-radius: 4px;
+	color: #fff;
     cursor: pointer;
-    width: 100%;
-    border-radius: 4px;
+	margin: 8px 0;
+	padding: 14px 20px;
+	width: 100%;
 }
+#userlogin button:hover { opacity: 0.8; }
+#cancel { background-color: #f44336; }
 
-#userlogin button:hover {
-    opacity: 0.8;
-}
-
-/* cancel button */
-
-#cancel {
-  background-color: #f44336;
-}
-
-/* center user icon image */
+/* 9.2 My Account User Icon Image */
 #icon {
-    text-align: center;
     margin: 24px 0 12px 0;
+	text-align: center;
 }
 
-/* avatar image */
+/* 9.3 My Account Avatar Image */
 #usericon {
-    filter: brightness(50%);
-    width: 20%;
     border-radius: 50%;
+	filter: brightness(50%);
+    width: 20%;
 }
 
-/* container padding */
-#userlogin {
-  padding: 16px;
-}
+/* 9.4 My Account Container Padding */
+#userlogin { padding: 16px; }
 
-/* forgot password */
+/* 9.5 My Account Forgot Password */
 #forgotusername, #forgotpassword {
     display: block;
     float: none;
     padding-top: 10px;
 }
-
 .help {
     background-color: #f1f1f1;
     padding: 15px;
 }
 
-/*footer*/
-
+/* 10.0 Footer */
 footer {
     background-color: var(--tertiary-color);
     color: var(--primary-color);
     font-size: 1rem;
-    text-align: center;
-    padding-bottom: 10px;
-	margin-top: 32px;
+    margin-top: 32px;
+	padding-bottom: 10px;
+	text-align: center;
 }
-#darkfooter {
-    background-color: #c35f1c;
-}
+#darkfooter { background-color: #c35f1c; }
 footer .logo {
-    height: 90px;
     display: block;
+	height: 90px;
     margin: auto;
     padding: 0 1rem 0 0;
 }
@@ -775,80 +790,91 @@ footer .logo {
     justify-content: space-around;
     padding: 10px 5px 20px;
 }
-.social {
-    height: 25px;
-}
+.social { height: 25px; }
 #lightfooter {
     display: grid;
     grid-template-columns: 1fr 7fr 1fr 7fr;
-    text-align: start;
     padding: 25px 10px 0;
+	text-align: start;
 }
 footer h4 {
-    text-align: left;
     padding: 25px 0 0 10px;
+	text-align: left;
 }
 .pin {
     height: 20px;
     vertical-align: middle;
 }
-footer ul {
-    padding: 0 5px 20px 0;
-}
+footer ul { padding: 0 5px 20px 0; }
 footer li:first-child {
-    padding: 0 0 10px;
     font-weight: bold;
+	padding: 0 0 10px;
 }
 footer p {
     font-size: 1.4rem;
-    text-align: start;
-    padding: 0 15px;
-	line-height: 1.4;
+    line-height: 1.4;
 	margin-bottom: 1.4em;
+	padding: 0 15px;
+	text-align: start;
 }
-footer p:first-child {
-    padding-top: 15px;
-}
-#contactFooter {
-	color: var(--primary-color);
-}
+footer p:first-child { padding-top: 15px; }
+#contactFooter { color: var(--primary-color); }
 #copyright {
     font-size: 1rem;
     text-align: center;    
 }
 
-
+/* 11.0 Media Queries */
+/* 11.1 Media Queries Min-Width 500px */
 @media screen and (min-width: 500px) {
     #services {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
-	.singleEvent img {
-		width: 400px;
-	}
-	.branchStyles img {
-		width: 400px;
-	}
-	#cancel {
-        width: auto;
+	.applyFieldset {
+        display: inline-block;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto;
     }
+    .applyFieldset p {
+        grid-column: span 2;
+        padding-top: 20px;
+		text-align: left;
+    }
+    .applyLabel {
+        display: inline-block;
+        margin-right: 5px;
+        text-align: right;
+		width: 175px;
+    }
+    .basics input, #applyText { width: 200px; }
+    .basics li {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    #applyNotes { text-align: left; }
+    .applyCheckbox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-auto-flow: column;
+        gap: 0 3em;
+    }
+    #applySubmit {
+    	cursor: pointer;
+    	margin-left: 20px;
+    	width: 150px;
+    }
+	.singleEvent img { width: 400px; }
+	.branchStyles img { width: 400px; }
+	#cancel { width: auto; }
     #forgotusername, #forgotpassword {
         float: right;
         padding-left: 15px;
     }
 }
 
-/*
-@media screen and (min-width: 500px) {
-    #services {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-}
-*/
-
-/* tablet */
-
+/* 11.2 Media Queries Min-Width 700px - Tablet */
 @media screen and (min-width: 700px) {
     nav {
         display: flex;
@@ -866,61 +892,60 @@ footer p:first-child {
         padding-right: 15px;
     }
 	#hero {
-        background-image: url(../images/south-large.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 300px;    
+        background: url(../images/south-large.jpg) no-repeat center/cover;
+        height: 300px;
+		width: 100%;
     }
-	/*service page MOR*/
-    #services {
+	#services {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         place-items: center;
         gap: 10px;
-        width: 80vw;
         margin: 0 auto;
+		width: 80vw;
     }
-    .containerServ img {
-        width: fit-content;
+	.applyForm {
+        display: grid;
+        grid-template-rows: auto auto;
     }
+    .applyFieldset {
+        margin: 2rem;
+        grid-template-columns: 200px 1fr 1fr;
+        grid-template-rows: 50px 100px 50px 100px 50px 100px auto;
+    }
+    .basics { grid-row: span 7; }
+    .applyFieldset p, .applyCheckbox, .applyRadio { grid-column-start: 2; }
+    .applyFieldset p:last-of-type, .applyRadio { margin-top: 40px; }
+    .applyCheckbox {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 2rem 2rem 2rem 2rem;
+        grid-auto-flow: column;
+        gap: 0 3em;
+    }
+    .containerServ img { width: fit-content; }
     .containerServ {
-        width: 250px;
         height: 200px;
+        width: 250px;
         margin-top: 20px;
     }
-    /*calendar*/
     .calendarContainer {
         font-family: var(--main-font);
-        /*max-width: 800px;*/
         margin: 0 auto;
+		/*max-width: 800px;*/
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 80vw;
         gap: 20px;
+		width: 80vw;
     }
-	.singleEvent {
-	max-width: 700px;
-	}
-	.carouselTitle h2 {
-    margin-left: 15%;
-    }
-    /*catalog*/
-    .slick-prev {
-        left: -35px;
-	}
-    .slick-next {
-        right: -25px;
-	}
-	.singleBook {
-	max-width: 700px;
-	}
-	.contactForm {
-		max-width: 700px;
-	}
-	footer {
+	.singleEvent { max-width: 700px; }
+	.carouselTitle h2 { margin-left: 15%; }
+    .slick-prev { left: -35px; }
+    .slick-next { right: -25px; }
+	.singleBook { max-width: 700px; }
+	.contactForm { max-width: 700px; }
+	footer { 
         display: flex;
         padding-bottom: 0;
     }
@@ -931,71 +956,88 @@ footer p:first-child {
         }
     footer section:last-child {
         align-content: center;
-        text-align: left;
+        border-left: solid 1px var(--primary-color);
         margin: 20px 0;
         padding-left: 10px;
-        border-left: solid 1px var(--primary-color);
-    }
-    footer p:first-child {
-        padding-top: 0;
-    }
-    #copyright {
         text-align: left;
     }
+    footer p:first-child { padding-top: 0; }
+    #copyright { text-align: left; }
 }
 
-/*
-@media screen and (min-width: 900px) {
-    
-    #services {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        
-    }
-    
-       
-}
-*/
-
-/* desktop */
-
+/* 11.3 Media Queries Min-Width 1000px - Desktop */
 @media screen and (min-width: 1000px) {
     #hero { height: 400px; }
-    #darkfooter {
-        margin-right: 15px;
+	#imgHome {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        /*padding: 10px;*/
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-right: 80px;
     }
+    .cntHome {
+        grid-column: 1/2;
+        grid-row: 1/3;
+        place-items: center;
+    }
+    #elibrary ul {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+     #imgSpotlight {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        margin: 0 auto;
+		padding: 10px;
+        padding-top: 40px;
+    }
+    #darkfooter { margin-right: 15px; }
     #lightfooter { grid-template-columns: 1fr 8fr 1fr 7fr; }
     footer section:last-child {
-        padding-left: 30px;
         margin-left: 20px;
+		padding-left: 30px;
     }
-	/*services page MOR*/
-    #services {
+	#services {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         place-items: center;
         gap: 10px;
     }
-	#srchInput {
-        width: 30%;
+	.applyFieldset {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 100px 50px 100px 50px 100px auto;
+        max-width: 1000px;
     }
-	.slick-prev {
-    left: -45px;
-	}
-    .slick-next {
-        right: -35px;
-	}
+    .basics input, #applyText { width: 400px; }
+	#srchInput { width: 30%; }
+	.slick-prev { left: -45px; }
+    .slick-next { right: -35px; }
+	.singleBook img {
+		height: 350px;
+   	 	display: flex;
+    	justify-items: center;
+    }
+    #authorImage { height: 250px; }
+    #singleBook {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
 }
 
+/* 11.4 Media Queries Min-Width 1200px - Larger Screens */
 @media screen and (min-width: 1200px) {
-    
     #services {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-        
     }
     .calendarContainer {
        display: grid;
