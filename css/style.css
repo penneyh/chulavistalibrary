@@ -368,7 +368,7 @@ select#search {
     background-color: var(--primary-color);
 	border-radius: 15px;
     box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.2);
-	margin: 20px auto;
+	margin: 40px auto;
 	padding: 20px;
     padding-top: 40px;
     height: auto;
