@@ -190,8 +190,9 @@
             </section>
         </footer>    
 		
-		<script src="scripts/jq-min.js"></script> 
-        <script src="scripts/slick.min.js"></script>
+		<!--jQuery-->
+        <script src="../scripts/jq-min.js"></script> 
+        <script src="../scripts/slick.min.js"></script>
         <script> 
             $(document).ready(function(){
                 $(".carousel").slick({
@@ -203,16 +204,7 @@
                     arrow: true,
                     responsive: [
                         {
-                            breakpoint: 1300,
-                            settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 5,
-                                infinite: true,
-                                dots: true
-                            }
-                        },
-                        {
-                            breakpoint: 1200,
+                            breakpoint: 1400,
                             settings: {
                                 slidesToShow: 4,
                                 slidesToScroll: 4,
@@ -221,10 +213,19 @@
                             }
                         },
                         {
-                            breakpoint: 700,
+                            breakpoint: 1200,
                             settings: {
                                 slidesToShow: 3,
                                 slidesToScroll: 3,
+                                infinite: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
                                 infinite: true,
                                 dots: true         
                                      }
@@ -242,7 +243,7 @@
                   });
                 
             });
-        </script>
+        </script> 
 		
     </body>
 </html>
