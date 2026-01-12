@@ -1,7 +1,7 @@
 /*
  TABLE OF CONTENTS
 ________________________
-    1.0 Project detals / Color and typography info 
+    1.0 Project Details / Color and typography info 
     2.0 Global Styles
     3.0 Header and Nav
 		3.1 Header
@@ -42,8 +42,8 @@ ________________________
 		11.4 Media Queries Min-Width 1200px - Larger Screens
 */
 
-/* 1.0 Project details / color and typography info 
-        Project details
+/* 1.0 Project Details / color and typography info 
+        Project Details
 Author: Penney Holland, Maria Ocampo-Ross, Tiffany Poon
 Project: Chula Vista Library website - Group 1
 Ver: 1.2
@@ -990,7 +990,6 @@ footer p:first-child { padding-top: 15px; }
         /*padding: 10px;*/
         margin: 0 auto;
         padding-top: 40px;
-        padding-right: 80px;
     }
     .cntHome {
         grid-column: 1/2;
@@ -1001,6 +1000,8 @@ footer p:first-child { padding-top: 15px; }
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		margin: 0 auto;
+		width: 80vw;
     }
      #imgSpotlight {
         display: grid;
@@ -1008,8 +1009,8 @@ footer p:first-child { padding-top: 15px; }
         grid-template-rows: 1fr;
         gap: 10px;
         margin: 0 auto;
-		padding: 10px;
-        padding-top: 40px;
+		padding: 40px;
+		width: 80vw;
     }
     #darkfooter { margin-right: 15px; }
     #lightfooter { grid-template-columns: 1fr 8fr 1fr 7fr; }
