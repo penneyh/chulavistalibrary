@@ -169,7 +169,11 @@ nav input[type=checkbox] { display: none; }
     height: 25vh;
     position: relative;
 }
-
+#heroLocations {
+	background: url(../images/millenia-small.jpg) no-repeat center/cover;
+    height: 25vh;
+    position: relative;
+}
 /* 3.4 Motto */
 #motto {
     background-color: var(--primary-color);
@@ -903,6 +907,11 @@ footer p:first-child { padding-top: 15px; }
     }
 	#hero {
         background: url(../images/south-large.jpg) no-repeat center/cover;
+        height: 300px;
+		width: 100%;
+    }
+	#heroLocations {
+        background: url(../images/millenia-large.jpg) no-repeat center/cover;
         height: 300px;
 		width: 100%;
     }
