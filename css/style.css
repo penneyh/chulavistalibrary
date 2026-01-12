@@ -175,6 +175,7 @@ nav input[type=checkbox] { display: none; }
     background-color: var(--primary-color);
     color: #fff;
     font-style: italic;
+	overflow-wrap: normal;
     padding: 15px;
 	text-align: center;
 }
