@@ -46,8 +46,8 @@ ________________________
         Project details
 Author: Penney Holland, Maria Ocampo-Ross, Tiffany Poon
 Project: Chula Vista Library website - Group 1
-Ver: 1.1
-Last Updated: 1/10/2025
+Ver: 1.2
+Last Updated: 1/11/2025
 Notes: This is a possible redesign of the existing Chula Vista Library website. This is presented by group 1 of FEWD 2.
 ---------------------
 
@@ -293,7 +293,7 @@ img#bookSale {
 #elibrary li { 
 	font-size: 1.5rem;
 	font-weight: bold;
-	margin: 50px 50%;
+	margin: 50px 15%;
 	padding-bottom: 15px; 
 	text-align: center;
     display: flex;
