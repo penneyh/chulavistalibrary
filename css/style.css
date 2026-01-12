@@ -369,6 +369,10 @@ select#search {
     font-size: 30px;
 }
 .slick-list { background-color: var(--tertiary-color); }
+.slick-track {
+	display: flex;
+	align-items: center;
+}
 .outerBox, .carousel {
     display: flex;
     justify-content: center;
@@ -387,10 +391,6 @@ select#search {
 .carousel {
     background-color: #fff;
     width: 90%;
-}
-.carousel img {
-    height: 200px;
-    width: auto;
 }
 
 /* 5.4 Catalog Single Book Page */
