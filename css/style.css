@@ -165,7 +165,12 @@ nav input[type=checkbox] { display: none; }
 
 /* 3.3 Hero */
 #hero {
-	background: url(../images/south-small.jpg) no-repeat center/cover;
+	background: url(../images/civic-large.jpg) no-repeat center/cover;
+    height: 25vh;
+    position: relative;
+}
+#heroContact {
+	background: url(../images/angle-small.jpg) no-repeat center/cover;
     height: 25vh;
     position: relative;
 }
@@ -906,7 +911,12 @@ footer p:first-child { padding-top: 15px; }
         padding-right: 15px;
     }
 	#hero {
-        background: url(../images/south-large.jpg) no-repeat center/cover;
+        background: url(../images/civic-large.jpg) no-repeat center/cover;
+        height: 300px;
+		width: 100%;
+    }
+	#heroContact {
+        background: url(../images/angle-large.jpg) no-repeat center/cover;
         height: 300px;
 		width: 100%;
     }
