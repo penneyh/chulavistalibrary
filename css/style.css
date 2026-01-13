@@ -507,14 +507,14 @@ h3.year {
 
 /* 7.0 Services Page */
 .servHero {
-    /*background: center center / cover no-repeat;*/
-    /*background: url('../images/servicesHerosml2.jpg') center center / cover no-repeat;*/
+    background: center center / cover no-repeat;
+    background: url('../images/servicesHero.jpg') center center / cover no-repeat;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);
+/*    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);*/
 	max-width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
@@ -524,7 +524,7 @@ h3.year {
 .headerContainer h1 {
     background-color: var(--tertiary-color);
 	color: var(--primary-color);
-    padding-bottom: 10px;
+	padding: 10px 0;
     text-align: center;
 }
 
