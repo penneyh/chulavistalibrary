@@ -561,7 +561,66 @@ h3.year {
     text-align: center;
 }
 
+/* 7.2 Volunteer Page */
+.supportLibrary h2 {
+    color: var(--primary-color);
+    padding: 0 10px;
+}
+.supportLibrary p {
+    color: var(--secondary-color);
+	line-height: 1.5;
+	padding: 10px 10px 20px;
+}
 
+/* 7.2.1 Volunteer Page Form */
+#volunteerForm { padding: 10px; }
+.applyFieldset {
+    border: solid 1px #000;
+    border-radius: 4px;
+	padding: 20px 1rem;
+}
+.applyFieldset legend {
+    color: var(--primary-color);
+	font-size: 2rem;
+	font-style: italic;
+    padding: 0 5px;
+}
+.applyLabel {
+    color: var(--secondary-color);
+	font-size: 1.6rem;
+    padding: 15px 0 5px;
+    display: block;
+}
+.applyFieldset p {
+    color: var(--secondary-color);
+    padding: 2rem 0 1rem;
+}
+.basics input, #notes {
+    border: solid 1px #888;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    padding: 8px;
+    width: 95%;
+}
+#notes {
+    font: 14px Arial, sans-serif;
+	height: 100px;
+}
+.applyCheckbox, .applyRadio { font-size: 1.2rem; }
+#requiredNote {
+    color: var(--secondary-color);
+    padding: 10px 0;
+}
+#applySubmit {
+    background-color: var(--primary-color);
+    border: none;
+	border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+	margin: 10px;
+    padding: 15px 30px;
+    width: 95%;
+}
 
 /* 8.0 Contact Page */
 #contactTableMain {
@@ -673,63 +732,6 @@ h3.year {
 	margin-left: 0;
 	margin-right: auto;
 	width: 150px;
-}
-
-/* 7.2 Volunteer Page */
-.supportLibrary h2 { color: var(--primary-color); }
-.supportLibrary p {
-    color: var(--secondary-color);
-	line-height: 1.5;
-    padding: 10px 10px 20px;
-}
-
-/* 7.2.1 Volunteer Page Form */
-.supportLibrary, .applyFieldset { padding: 0 15px; }
-.applyFieldset {
-    border: solid 1px #000;
-    border-radius: 4px;
-	margin: 2rem 1rem;
-	padding: 2rem 1rem;
-}
-.applyFieldset legend {
-    color: var(--primary-color);
-	font-size: 2rem;
-	font-style: italic;
-    padding: 0 5px;
-}
-.applyLabel {
-    color: var(--secondary-color);
-	font-size: 1.6rem;
-    display: block;
-    margin: 15px 5px 5px 0;
-}
-.basics input {
-    display: block;
-	width: 90%;
-}
-.applyFieldset p {
-    color: var(--secondary-color);
-    padding: 1rem 0;
-}
-.applyFieldset input, #applyText {
-    border: solid 1px #888;
-    border-radius: 4px;
-	font-size: 1.4rem;
-    margin-top: 5px;
-	padding: 8px;
-}
-#applyText {
-    height: 100px;
-	width: 90%;
-}
-#applySubmit {
-    background-color: var(--primary-color);
-    border: none;
-	border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    padding: 14px 20px;
-	width: 100%;
 }
 
 /* 9.0 My Account Page */
@@ -941,25 +943,12 @@ footer p:first-child { padding-top: 15px; }
         margin: 0 auto;
 		width: 80vw;
     }
-	.applyForm {
-        display: grid;
+	.applyCheckbox {
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto auto;
     }
-    .applyFieldset {
-        margin: 2rem;
-        grid-template-columns: 200px 1fr 1fr;
-        grid-template-rows: 50px 100px 50px 100px 50px 100px auto;
-    }
-    .basics { grid-row: span 7; }
-    .applyFieldset p, .applyCheckbox, .applyRadio { grid-column-start: 2; }
-    .applyFieldset p:last-of-type, .applyRadio { margin-top: 40px; }
-    .applyCheckbox {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        grid-template-rows: 2rem 2rem 2rem 2rem;
-        grid-auto-flow: column;
-        gap: 0 3em;
-    }
+    .applyFieldset p { padding-top: 30px;}
+    .basics input, #notes { width: 450px; }
     .containerServ img { width: fit-content; }
     .containerServ {
         height: 200px;
@@ -1048,13 +1037,30 @@ footer p:first-child { padding-top: 15px; }
         gap: 10px;
 		margin-top: 40px;
     }
-	.applyFieldset {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50px 100px 50px 100px 50px 100px auto;
-        max-width: 1000px;
+	.applyCheckbox {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto auto auto auto;
     }
-    .basics input, #applyText { width: 400px; }
-	#srchInput { width: 30%; }
+    .basics input, #notes { width: 300px; }
+    .applyForm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .basics { grid-row: span 6; }
+    .applyFieldset p {
+        grid-column: 2;
+        padding: 50px 0 0 50px;
+    }
+    .applyCheckbox {
+        grid-column: 2;
+        padding-left: 50px;
+    }
+    .applyRadio {
+        grid-column: 2;
+        grid-row: 6;
+        padding-left: 50px;
+    }
+    .applyRadio li { padding-bottom: 5px; }
 	.slick-prev { left: -45px; }
     .slick-next { right: -35px; }
 	.singleBook img {
