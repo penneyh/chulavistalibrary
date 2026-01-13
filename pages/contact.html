@@ -8,8 +8,7 @@
         <meta name="author" content="Penney Holland, Maria Ocampo-Ross, Tiffany Poon">
         <title>Chula Vista Library - Contact Us</title>
         <!-- material icons -->
-	<!-- an error is popping up on the validator for the line below -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"> 
 		<!-- font awesome icons -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" type="text/css">
@@ -26,7 +25,8 @@
                        <span class="fa-solid fa-bars"></span>
                    </label>
                </section>
-		<!-- validator error, line below requires aria pressed attribute -->
+				<!-- validator error, line below requires aria pressed attribute -->
+				<!-- Navigation Menu -->
                <input type="checkbox" id="showMenu" role="button">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -38,12 +38,7 @@
             </nav>
         </header>
          <header class="headerContainer">
-          <!--
-          <div class="servHero">
-              
-          </div>
-          -->
-           
+          	 
            <div id="heroContact"></div> 
 		   <h1 id="cal">CONTACT US</h1>
        </header>        
@@ -51,6 +46,7 @@
         
         <main id="contactTableMain">
             <section>
+				<!-- Library administration Contact names and phone numbers -->
                 <table class="contactTable">
                    <thead>
                        <tr>
@@ -86,35 +82,39 @@
                 </table>
                </section>
                <section class="contactLocation">
+				   <!-- Links to Locations & Hours page and to the Holiday Closures page -->
                    <h3><a href="locations.html">Locations & Hours</a></h3>
                    <h3>Holiday Closures</h3>
+				   <!-- If site were finished, this would link to a Holiday Closures page -->
                </section>
                <section class="contactForm">
                    <h3>Please contact us with any comments or questions by filling out the form below.</h3>
 			
-                <!-- form -->
+                <!-- Conact the library form for comments or questions -->
                 <form action="mailto:penneyh@gmail.com" method="post" id="saveForm">
+					<!-- Form action set to go to a working email for now because not attached to DB -->
                    <fieldset class="contactFieldset">
                    <legend class="contactLegend">Contact Information</legend>
+					<!-- First Name Contact Field -->
                     <label for="first_name">First Name: </label>
                     <input type="text" id="first_name" name="first_name" value="" placeholder="Your First Name" required>*
                     
                     <p></p>
-                    
+                    <!-- Last Name Contact Field -->
                     <label for="last_name">Last Name: </label>
                     <input type="text" id="last_name" name="last_name" value="" placeholder="Your Last Name" required>*
                     
                     <p></p>
-                    
+                    <!-- Email Contact Field -->
                     <label for="email">Email Address: </label>
                     <input type="email" id="email" name="email" value="" placeholder="your@email.com" required>*    
                     
                     <p></p>
-                    
+                    <!-- Phone Contact Field -->
                     <label for="phone">Phone: </label>
                     <input type="text" id="phone" name="phone" value="" placeholder="(___)___-____">    
                     </fieldset>
-                    
+                    <!-- Type of Comments or Questions Drop-Down List -->
                     <fieldset class="contactFieldset">
                         <legend class="contactLegend">Comments/Questions</legend>
                         <label for="commentType" id="contactTextArea">Type of Comments/Question:*</label>
@@ -131,11 +131,11 @@
                         </select>
                         
                        <p></p>
-                        
+                        <!-- Text area for contact comment or question message to library -->
                         <label for="contactMessage" id="contactComments">Comments/Questions:*</label>
                         <textarea name="message" id="contactMessage" placeholder="Write your message here please" required></textarea>
                     </fieldset>
-                    
+                    <!-- Submit form button -->
                     <input type="submit" id="contactSubmit" name="submit" value="Submit">
                     
                 </form>
@@ -145,16 +145,19 @@
         <div class="clearIt"></div>    
         
         <footer>
+			<!-- Footer section -->
             <section id="darkfooter">
                 <p><a href="../index.html"><img src="../images/logoblue.svg" alt="library logo" class="logo"></a></p>
                 <ul id="socials">
+					<!-- Social Media Links -->
                     <li><a href="http://www.facebook.com" target="_blank"><img src="../images/facebook.svg" alt="facebook icon" class="social"></a></li>
                     <li><a href="http://www.instagram.com" target="_blank"><img src="../images/instagram.svg" alt="instagram icon" class="social"></a></li>
                     <li><a href="http://www.youtube.com" target="_blank"><img src="../images/youtube.svg" alt="youtube icon" class="social"></a></li>
                     <li><a href="http://www.x.com" target="_blank"><img src="../images/x.svg" alt="x icon" class="social"></a></li>
                 </ul>
             </section>
-            <h4>Locations:</h4>
+            <!-- Library Branch Locations -->
+			<h4>Locations:</h4>
             <section id="lightfooter">
                 <img src="../images/location.svg" alt="location pin" class="pin">
                 <ul>
