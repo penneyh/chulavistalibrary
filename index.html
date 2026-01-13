@@ -8,7 +8,6 @@
         <meta name="author" content="Penney Holland, Maria Ocampo-Ross, Tiffany Poon">
         <title>Chula Vista Library - Homepage</title>
         <!-- material icons -->
-	<!-- an error is popping up on the validator for the line below -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"> 
 		<!-- font awesome icons -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" type="text/css">
@@ -22,14 +21,17 @@
     </head>
     <body>
 		<header> 
+           <!-- navigation bar -->
             <nav>
+               <!-- library logo links back to homepage -->
                <section>
                    <a href="index.html"><img src="images/logowhite.svg" alt="library logo" class="logo"></a>
+                   <!-- responsive hamburger navigation menu -->
                    <label for="showMenu" class="showMenu">
                        <span class="fa-solid fa-bars"></span>
                    </label>
                </section>
-		<!-- validator error, line below requires aria pressed attribute -->
+		       <!-- validator error, line below requires aria pressed attribute -->
                <input type="checkbox" id="showMenu" role="button">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -42,8 +44,12 @@
         </header>
 		
 		<main>
-            <div id="hero"></div>    
+            <!-- hero image container -->
+            <section id="hero"></section>  
+            <!-- library motto banner -->  
             <h3 id="motto">Building connections, promoting literacy, and engaging the community</h3>
+            <!-- library catalog search form -->
+            <!-- choose whether to search by keyword, title, author, or subject -->
             <form action="mailto:group1@fewd2.com" method="post" enctype="text/plain" id="keywords">
                <fieldset>
                     <legend>Search the Catalog</legend>
@@ -57,6 +63,7 @@
                     <input type="submit" value="Search">
                 </fieldset>  
             </form>   
+            <!-- feature for an upcoming event -->
             <section id="imgHome">
                 <article class="cntHome">
                     <figure>
@@ -65,28 +72,28 @@
                     </a>
                     </figure>
                 </article>
-            <!--
-            </section>
-            <section>
-            -->
+                <!-- we updated upcoming events to tie in with calendar -->
                <article class="cntHome2">
                     <figure>
                        <figcaption class="cntFig">Upcoming Events</figcaption>
                         <a href="pages/calendar.html"><img src="images/science2.jpg" alt="science experiment" class="cntImg"></a>
                     </figure>
                </article>
+               <!-- important library feature -->
               <article class="cntHome2">
                     <figure>
                        <figcaption class="cntFig">Meeting Rooms</figcaption>
                     <img src="images/meeting2.jpg" alt="meeting room" class="cntImg">
                     </figure>
               </article>
+              <!-- how to get involved -->
               <article class="cntHome2">
                     <figure>
                        <figcaption class="cntFig">Volunteer</figcaption>
                         <a href="pages/volunteer.html"><img src="images/hands2.jpg" alt="two handprints" class="cntImg"></a>
                     </figure>
               </article>
+              <!-- highlighted resource for the community -->
                <article class="cntHome2">
                     <figure>
                        <figcaption class="cntFig">Jobs</figcaption>
@@ -94,6 +101,7 @@
                     </figure>
                </article>
             </section>
+            <!-- quick access to library databases -->
             <section id="elibrary">
                 <ul>
                     <li><img src="images/computer.svg" alt="computer icon" class="library">eLibrary</li>
@@ -103,7 +111,7 @@
                     <li><img src="images/movie.svg" alt="movie icon" class="library">eMovies</li>
                 </ul>
             </section>
-            
+            <!-- spotlight on interesting events and resources -->
             <h2 class="homeH2">Spotlight</h2>
             <article id="imgSpotlight">
                 <figure class="cntSpotlight">
@@ -115,15 +123,10 @@
                     <img src="images/eagle2.jpg" alt="eagle with american flag" class="cntImg2">
                 </figure>
             </article>
-<!--
-            <article>
-               <h2>Book of the Month</h2>
-            </article>
--->
+            <!-- staff pick books -->
+            <!-- jQuery carousel -->
 			<h2 class="homeH2">Book of the Month</h2>
 			<section class="carouselTitle">
-                
-
                 <div class="outerBox">
                     <div class="carousel">
                         <a href="pages/singleBookNew.html"><img src="images/book1.jpg" alt="Sunrise on the Reaping by Suzanne Collins"></a>
@@ -137,13 +140,13 @@
                      </div>
                 </div>
            </section>
-			
-			
         </main>
-		
 		<footer>
+            <!-- colorblocked responsive footer -->
             <section id="darkfooter">
+                <!-- library logo links back to homepage -->
                 <p><a href="index.html" target="_blank"><img src="images/logoblue.svg" alt="library logo" class="logo"></a></p>
+                <!-- social media accounts for latest updates -->
                 <ul id="socials">
                     <li><a href="http://www.facebook.com" target="_blank"><img src="images/facebook.svg" alt="facebook icon" class="social"></a></li>
                     <li><a href="http://www.instagram.com" target="_blank"><img src="images/instagram.svg" alt="instagram icon" class="social"></a></li>
@@ -151,6 +154,7 @@
                     <li><a href="http://www.x.com" target="_blank"><img src="images/x.svg" alt="x icon" class="social"></a></li>
                 </ul>
             </section>
+            <!-- library branch and bookstore locations -->
             <h4>Locations:</h4>
             <section id="lightfooter">
                 <img src="images/location.svg" alt="location pin" class="pin">
@@ -182,10 +186,13 @@
                     <li>(619) 691 - 5069</li>
                 </ul>
             </section>
+            <!-- quick links -->
             <section>
                 <p>About the Library</p>
                 <p>Frequently Asked Questions</p>
+                <!-- contact form -->
                 <p><a href="pages/contact.html" id="contactFooter"><img src="images/envelope.svg" alt="email icon" class="pin"> Contact Us</a></p>
+                <!-- copyright -->
                 <p id="copyright">&copy; 2025 FEWD2 Group 1</p>
             </section>
         </footer>    
