@@ -52,7 +52,7 @@
                 <h2>Volunteer Opportunities</h2>
                 <p>We have volunteer opportunities at all three branch library locations as well as through the Friends of the Library. Volunteers assist with tutoring, homework help, shelving materials, and many other tasks. Volunteers must commit to a minimum of one hour per week for six months.</p>
             </section>
-            <section>
+            <section id="volunteerForm">
                 <!-- volunteer forms -->
                 <form
                     onsubmit="return validateCheckboxes()"
@@ -66,7 +66,7 @@
                                 <label for="first_name" class="applyLabel">First Name*: </label>
                                 <input
                                     type="text"
-                                    id="applyFirst"
+                                    id="first_name"
                                     name="first_name"
                                     value=""
                                     placeholder="first name"
@@ -77,18 +77,17 @@
                                 <label for="last_name" class="applyLabel">Last Name*: </label>
                                 <input
                                     type="text"
-                                    id="applyLast"
+                                    id="last_name"
                                     name="last_name"
                                     value=""
                                     placeholder="last name"
-                                    required
-                                    autofocus>
+                                    required>
                             </li>
                             <li>
                                 <label for="email" class="applyLabel">Email*: </label>
                                 <input
                                     type="email"
-                                    id="applyEmail"
+                                    id="email"
                                     name="email"
                                     value=""
                                     placeholder="your@email.com"
@@ -98,7 +97,7 @@
                                 <label for="phone" class="applyLabel">Phone: </label>
                                 <input
                                     type="text"
-                                    id="applyPhone"
+                                    id="phone"
                                     name="phone"
                                     value=""
                                     placeholder="(___)___-____"
@@ -108,7 +107,7 @@
                                 <label for="birthdate" class="applyLabel">Date of Birth*:</label>
                                 <input
                                     type="text"
-                                    id="applyBirthdate"
+                                    id="birthdate"
                                     name="birthdate"
                                     value=""
                                     placeholder="mm/dd/yyyy"
@@ -118,7 +117,7 @@
                                 <label for="street" class="applyLabel">Address*:</label>
                                 <input
                                     type="text"
-                                    id="applyStreet"
+                                    id="street"
                                     name="street"
                                     value=""
                                     placeholder="street address"
@@ -126,17 +125,28 @@
                             </li>
                             <li>
                                 <label for="unit" class="applyLabel"></label>
-                                <input type="text" id="applyUnit" name="unit" value="" placeholder="apartment number">
+                                <input 
+                                    type="text" 
+                                    id="unit" 
+                                    name="unit" 
+                                    value="" 
+                                    placeholder="apartment number">
                             </li>
                             <li>
                                 <label for="city" class="applyLabel"></label>
-                                <input type="text" id="applyCity" name="city" value="" placeholder="city" required>
+                                <input 
+                                    type="text" 
+                                    id="city" 
+                                    name="city" 
+                                    value="" 
+                                    placeholder="city" 
+                                    required>
                             </li>
                             <li>
                                 <label for="state" class="applyLabel"></label>
                                 <input
                                     type="text"
-                                    id="applyState"
+                                    id="state"
                                     name="state"
                                     value=""
                                     placeholder="state"
@@ -144,18 +154,35 @@
                             </li>
                             <li>
                                 <label for="zip" class="applyLabel"></label>
-                                <input type="text" id="applyZip" name="zip" value="" placeholder="zip code" required>
+                                <input 
+                                    type="text" 
+                                    id="zip" 
+                                    name="zip" 
+                                    value="" 
+                                    placeholder="zip code" 
+                                    required>
                             </li>
                             <li>
                                 <label for="notes" class="applyLabel">Notes/Questions:</label>
-                                <textarea
+                                <!--
+                                <input
+                                    type="text"
+                                    id="notes"
                                     name="notes"
-                                    id="applyText"
-                                    placeholder="add your notes and questions here."></textarea>
+                                    value=""
+                                    rows="5"
+                                    placeholder="add your notes and questions here"
+                                    required>
+                                    -->
+                                <textarea 
+                                    id="notes"
+                                    name="notes" 
+                                    rows="5" 
+                                    placeholder="add your notes and questions here"></textarea>
                             </li>
                         </ul>
                         <p>Language(s)*:</p>
-                        <ul class=checkboxList>
+                        <ul class=applyCheckbox>
                             <li>
                                 <input
                                     type="checkbox"
@@ -225,7 +252,7 @@
                             </li>
                         </ul>
                         <p>What day(s) are you available?*</p>
-                        <ul class="checkboxList">
+                        <ul class="applyCheckbox">
                             <li>
                                 <input type="checkbox" id="day1" name="day" value="sunday" class="availability">
                                 <label for="sunday">Sunday</label>
@@ -256,7 +283,7 @@
                             </li>
                         </ul>
                         <p>Volunteer Location*:</p>
-                        <ul class="radioList">
+                        <ul class="applyRadio">
                             <li>
                                 <input type="radio" id="where1" name="where" value="civic" required>
                                 <label for="civic">Civic Center Branch Library</label>
@@ -275,9 +302,10 @@
                             </li>
                         </ul>
                     </fieldset>
-
+                    <p id="requiredNote">* indicates required field</p>
                     <input type="submit" id="applySubmit" name="submit" value="Submit">
                 </form>
+                <!--
                 <script>
                     function validateCheckboxes() {
                         // Get all checkboxes in list of languages
@@ -319,7 +347,7 @@
                         }
                         return true; // Allow form submission
                     }
-                </script>
+                </script> -->
             </section>
         </main>
 
