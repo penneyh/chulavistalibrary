@@ -24,7 +24,9 @@
         <header>
             <nav>
                 <section>
+                    <!-- library logo links back to homepage -->
                     <a href="../index.html"><img src="../images/logowhite.svg" alt="library logo" class="logo"></a>
+                    <!-- responsive hamburger navigation menu -->
                     <label for="showMenu" class="showMenu">
                         <span class="fa-solid fa-bars"></span>
                     </label>
@@ -43,17 +45,20 @@
         </header>
 
         <main>
+           <!-- page title banner -->
            <h1 class="catalogTitle">SUPPORT THE LIBRARY</h1>
+           <!-- organizations supporting Chula Vista Library -->
             <section class="supportLibrary">
                 <h2>Friends of the Chula Vista Library</h2>
                 <p>Founded in 1968, Friends of the Chula Vista Library is a nonprofit, 501(c)(3) organization dedicated to the support of the Chula Vista Public Library and the Heritage Museum through advocacy, fundraising and volunteerism.</p>
                 <h2>Chula Vista Public Library Foundation</h2>
                 <p>The Chula Vista Public Library Foundation was created a as non-profit, charitable foundation for the purpose of helping raise additional funds from the community and to involve area business professionals, philanthropists, and community members with the Library and its vital community programs.</p>
+                <!-- volunteering information -->
                 <h2>Volunteer Opportunities</h2>
                 <p>We have volunteer opportunities at all three branch library locations as well as through the Friends of the Library. Volunteers assist with tutoring, homework help, shelving materials, and many other tasks. Volunteers must commit to a minimum of one hour per week for six months.</p>
             </section>
+            <!-- volunteer application form -->
             <section id="volunteerForm">
-                <!-- volunteer forms -->
                 <form
                     onsubmit="return validateCheckboxes()"
                     action="mailto:group1@fewd2.edu"
@@ -61,6 +66,7 @@
                     id="applyForm">
                     <fieldset class="applyFieldset">
                         <legend>Apply to Volunteer</legend>
+                        <!-- basic information -->
                         <ul class="basics">
                             <li>
                                 <label for="first_name" class="applyLabel">First Name*: </label>
@@ -181,6 +187,7 @@
                                     placeholder="add your notes and questions here"></textarea>
                             </li>
                         </ul>
+                        <!-- two checkbox lists -->
                         <p>Language(s)*:</p>
                         <ul class=applyCheckbox>
                             <li>
@@ -282,6 +289,7 @@
                                 <label for="saturday">Saturday</label>
                             </li>
                         </ul>
+                        <!-- one radio button list -->
                         <p>Volunteer Location*:</p>
                         <ul class="applyRadio">
                             <li>
@@ -302,58 +310,19 @@
                             </li>
                         </ul>
                     </fieldset>
+                    <!-- symbol key -->
                     <p id="requiredNote">* indicates required field</p>
+                    <!-- submit volunteer form button -->
                     <input type="submit" id="applySubmit" name="submit" value="Submit">
                 </form>
-                <!--
-                <script>
-                    function validateCheckboxes() {
-                        // Get all checkboxes in list of languages
-                        const checkboxes = document.querySelectorAll(".languages");
-                        let isChecked = false;
-                        // Check if at least one day is selected
-                        for (let i = 0; i < checkboxes.length; i++) {
-                            if (checkboxes[i].checked) {
-                                isChecked = true;
-                                break; // Exit the loop as one day is found
-                            }
-                        }
-                        // If no days are checked, prevent form submission and alert user
-                        if (!isChecked) {
-                            alert("You must select at least one day of the week.");
-                            return false; // Prevent form submission
-                        }
-                        return true; // Allow form submission
-                    }
-                </script>
-                <script>
-                    function validateCheckboxes() {
-                        // Get all checkboxes in days of availability
-                        const checkboxes = document.querySelectorAll(".availability");
-                        let isChecked = false;
-
-                        // Check if at least one day is selected
-                        for (let i = 0; i < checkboxes.length; i++) {
-                            if (checkboxes[i].checked) {
-                                isChecked = true;
-                                break; // Exit the loop as one day is found
-                            }
-                        }
-
-                        // If no days are checked, prevent form submission and alert user
-                        if (!isChecked) {
-                            alert("You must select at least one day of the week.");
-                            return false; // Prevent form submission
-                        }
-                        return true; // Allow form submission
-                    }
-                </script> -->
             </section>
         </main>
-
+        <!-- colorblocked responsive footer -->
         <footer>
             <section id="darkfooter">
+                <!-- library logo links back to homepage -->
                 <p><a href="../index.html"><img src="../images/logoblue.svg" alt="library logo" class="logo"></a></p>
+                <!-- social media accounts for latest updates -->
                 <ul id="socials">
                     <li><a href="http://www.facebook.com" target="_blank"><img src="../images/facebook.svg" alt="facebook icon" class="social"></a></li>
                     <li><a href="http://www.instagram.com" target="_blank"><img src="../images/instagram.svg" alt="instagram icon" class="social"></a></li>
@@ -363,6 +332,7 @@
             </section>
             <h4>Locations:</h4>
             <section id="lightfooter">
+                <!-- library branch and bookstore locations -->
                 <img src="../images/location.svg" alt="location pin" class="pin">
                 <ul>
                     <li>Civic Center Branch Library</li>
@@ -393,11 +363,14 @@
                 </ul>
             </section>
             <section>
+                <!-- quick links -->
                 <p>About the Library</p>
                 <p>Frequently Asked Questions</p>
+                <!-- contact form -->
                 <p>
                     <a href="../pages/contact.html" id="contactFooter"><img src="../images/envelope.svg" alt="email icon" class="pin"> Contact Us</a>
                 </p>
+                <!-- copyright -->
                 <p id="copyright">&copy; 2025 FEWD2 Group 1</p>
             </section>
         </footer>

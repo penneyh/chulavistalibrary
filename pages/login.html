@@ -8,7 +8,6 @@
         <meta name="author" content="Penney Holland, Maria Ocampo-Ross, Tiffany Poon">
         <title>Chula Vista Library - My Account Login</title>
         <!-- material icons -->
-	<!-- an error is popping up on the validator for the line below -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
       rel="stylesheet"> 
 		<!-- font awesome icons -->
@@ -19,13 +18,17 @@
     </head>
     <body>
         <header> 
+            <!-- navigation bar -->
             <nav>
+               <!-- library logo links back to homepage -->
                <section>
                    <a href="../index.html"><img src="../images/logowhite.svg" alt="library logo" class="logo"></a>
+                   <!-- responsive hamburger navigation menu -->
                    <label for="showMenu" class="showMenu">
                        <span class="fa-solid fa-bars"></span>
                    </label>
                </section>
+               <!-- validator error, line below requires aria pressed attribute -->
                <input type="checkbox" id="showMenu" role="button">
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -37,36 +40,46 @@
             </nav>
         </header>
         <main>
+            <!-- page title banner -->
 			<h1 class="catalogTitle">MY ACCOUNT</h1>
+			<!-- centering container for login form -->
 			<section id="loginContainer">
+            <!-- account login form -->
             <form action="action_page.php" method="post" id="login">
                 <section id="icon">
                     <img src="../images/user.svg" alt="user icon" id="usericon">
                 </section>
-
+                <!-- create a new account -->
                 <section class="help">
                     <article id="create"><a href="#">Create a new account </a></article>
                 </section>
+                <!-- log in with required username and password -->
                 <section id="userlogin">
                    <h1>Log in</h1>
                     <label for="username"><b>Username</b></label>
-                    <input type="text" id="username" placeholder="enter username here" name="username" required>
+                    <input type="text" id="username" placeholder="enter username here" name="username" required autofocus>
                     <label for="password"><b>Password</b></label>
                     <input type="password" id="password" placeholder="enter password here" name="password" required>
+                    <!-- submit login button -->
                     <button type="submit">Login</button>
                     <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
                 </section>
+                <!-- cancel login attempt -->
                 <section class="help">
                     <button type="button" id="cancel">Cancel</button>
+                    <!-- help with retrieving login information -->
                     <article id="forgotusername"><a href="#">Forgot username?</a></article>
                     <article id="forgotpassword"><a href="#">Forgot password?</a></article>
                 </section>
             </form>
 			</section>
         </main>
+        <!-- colorblocked responsive footer -->
         <footer>
             <section id="darkfooter">
+                <!-- library logo links back to homepage -->
                 <p><a href="../index.html"><img src="../images/logoblue.svg" alt="library logo" class="logo"></a></p>
+                <!-- social media accounts for latest updates -->
                 <ul id="socials">
                     <li><a href="http://www.facebook.com" target="_blank"><img src="../images/facebook.svg" alt="facebook icon" class="social"></a></li>
                     <li><a href="http://www.instagram.com" target="_blank"><img src="../images/instagram.svg" alt="instagram icon" class="social"></a></li>
@@ -76,6 +89,7 @@
             </section>
             <h4>Locations:</h4>
             <section id="lightfooter">
+                <!-- library branch and bookstore locations -->
                 <img src="../images/location.svg" alt="location pin" class="pin">
                 <ul>
                     <li>Civic Center Branch Library</li>
@@ -106,9 +120,12 @@
                 </ul>
             </section>
             <section>
+                <!-- quick links -->
                 <p>About the Library</p>
                 <p>Frequently Asked Questions</p>
+                <!-- contact form -->
                 <p><a href="contact.html" id="contactFooter"><img src="../images/envelope.svg" alt="email icon" class="pin"> Contact Us</a></p>
+                <!-- copyright -->
                 <p id="copyright">&copy; 2025 FEWD2 Group 1</p>
             </section>
         </footer>
