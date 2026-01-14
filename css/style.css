@@ -208,19 +208,6 @@ form#keywords {
     font-style: italic;
     padding: 0 4px;
 }
-/*
-#keywords input[type=submit], input[type=reset] {
-    background-color: #fff;
-	border: solid 1px #000;
-    border-radius: 4px;
-    display: inline-block;
-	margin: 0 1em 2em 0;
-	padding: .5em .75em;
-    min-width: inherit;
-    max-width: inherit;
-	width: inherit;
-}
-*/
 
 /* 4.2 Homepage Main */
 Input#search { width: 60%; }
@@ -445,7 +432,6 @@ select#search {
 }
 .calendarContainer {
     font-family: var(--main-font);
-/*    max-width: 800px;*/
     margin: 0 20px;
 }
 h2.eventTittle {
@@ -471,8 +457,6 @@ h3.year {
 	color: var(--primary-color);
     font-size: 1.5rem;
     padding: 8px 20px;
-    /*margin-right: 16px;*/
-    /*min-width: 82px;*/
 	display: flex;
     align-items: center;
     justify-content: center;
@@ -512,7 +496,6 @@ h3.year {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-/*    box-shadow: 0 8px 10px -8px rgba(0, 0, 0, 0.7);*/
 	max-width: 100%;
     min-height: 300px;
     margin: auto;
@@ -546,7 +529,6 @@ h3.year {
 	width: 200px;
     display: flex;
     justify-content: center;
-    /*margin: 30px;*/
 }
 .containerServ img {
     height: auto;
@@ -683,7 +665,6 @@ h3.year {
 }
 #contactTextArea, #contactComments {
     color: var(--secondary-color);
-	/*display: inline-block;*/
     font-size: 1.6rem;
  	margin-bottom: 5px;
     margin-right: 5px;
@@ -965,7 +946,6 @@ footer p:first-child { padding-top: 15px; }
     .calendarContainer {
         font-family: var(--main-font);
         margin: 0 auto;
-		/*max-width: 800px;*/
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
@@ -1005,7 +985,6 @@ footer p:first-child { padding-top: 15px; }
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: auto auto;
         gap: 10px;
-        /*padding: 10px;*/
         margin: 0 auto;
         padding-top: 40px;
     }
